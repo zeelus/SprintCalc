@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 
+import {StyleSheet, View, Text, SafeAreaView} from 'react-native';
+
 export default class GameScreen extends Component {
     render() {
-        return null;
+        return(
+            <SafeAreaView>
+                <Text>sda</Text>
+            </SafeAreaView>
+        )
     }
 }

@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, View, Button} from 'react-native';
 
 
 export default class App extends Component {
@@ -17,14 +17,15 @@ export default class App extends Component {
   };
 
   onButtonPressed = () => {
-    this.props.navigation.navigate('Game')
+    this.props.navigation.push('Game')
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome SprintCalc</Text>
-        <Button style={styles.startButton} title="StartGame" onPress={this.onButtonPressed} />
+        <View style={styles.buttonView}>
+          <Button color="#FFFFFF" title="Start Game"  onPress={this.onButtonPressed} />
+        </View>
       </View>
     );
   }
@@ -36,16 +37,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#D6D617',
+    margin: 0
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  startButton: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  buttonView: {
+    width: 200,
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#B2CEDE',
+    borderRadius: 40
+  }
 });
