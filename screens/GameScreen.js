@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
+import { createBottomTabNavigator } from 'react-navigation';
+import GameScreenInfo from './GameScreenInfo';
+import GameScreenCVs from './GameScreenCVs';
+import GameScreenProjects from './GameScreenProjects';
 
-import {StyleSheet, View, Text, SafeAreaView} from 'react-native';
+const TabNavigator = createBottomTabNavigator({
+    Info: GameScreenInfo,
+    CVs: GameScreenCVs,
+    Projects: GameScreenProjects
+});
 
-export default class GameScreen extends Component {
-    render() {
-        return(
-            <SafeAreaView>
-                <Text>sdaz</Text>
-            </SafeAreaView>
-        )
-    }
-}
+export default TabNavigator

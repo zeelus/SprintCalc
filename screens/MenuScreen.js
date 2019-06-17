@@ -1,20 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {StyleSheet, View, Button} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient'
 
 
 export default class App extends Component {
-
-  static navigationOptions = {
-    title: 'Welcome SprintCalc',
-  };
 
   onButtonPressed = () => {
     this.props.navigation.push('Game')
@@ -22,35 +11,54 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={styles.container} start={{x: 1, y:1}} end={{x: 0, y:0}} >
+        <Text style={styles.welcome}>SprintCalc</Text>
         <View style={styles.buttonView}>
-          <Button color="#140F2D" title="Start Game"  onPress={this.onButtonPressed} />
+          <Text style={styles.button} onPress={this.onButtonPressed} >Start Game</Text>
         </View>
-      </View>
+        <View style={styles.buttonView2}>
+          <Text style={styles.button}>Game info</Text>
+        </View>
+      </LinearGradient>
     );
   }
   
 }
 
 const styles = StyleSheet.create({
+  welcome: {
+    position: 'absolute',
+    top: 50,
+    fontSize: 50,
+    fontStyle: 'italic',
+    color: "#FFFFFF"
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#D72638',
     margin: 0
   },
-  welcome: {
-    fontSize: 20,
+  button: {
     textAlign: 'center',
-    margin: 10,
+    color: "#FFFFFF",
+    fontSize: 20,
+    //fontFamily: 'Roboto-Regular'
   },
   buttonView: {
     width: 200,
-    height: 100,
+    height: 70,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#3F88C5',
-    borderRadius: 40
+    backgroundColor: '#00C9A7',
+    borderRadius: 30,
+    margin: 10
+  },
+  buttonView2: {
+    width: 200,
+    height: 70,
+    justifyContent: 'center',
+    backgroundColor: '#845EC2',
+    borderRadius: 30,
+    margin: 10
   }
 });
