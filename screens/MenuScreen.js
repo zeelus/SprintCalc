@@ -24,7 +24,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.buttonView}>
-          <Button color="#FFFFFF" title="Start Game"  onPress={this.onButtonPressed} />
+          <Button color="#140F2D" title="Start Game"  onPress={this.onButtonPressed} />
         </View>
       </View>
     );
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#D6D617',
+    backgroundColor: '#D72638',
     margin: 0
   },
   welcome: {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#B2CEDE',
+    backgroundColor: '#3F88C5',
     borderRadius: 40
   }
 });

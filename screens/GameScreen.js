@@ -6,7 +6,7 @@ export default class GameScreen extends Component {
     render() {
         return(
             <SafeAreaView>
-                <Text>sda</Text>
+                <Text>sdaz</Text>
             </SafeAreaView>
         )
     }
