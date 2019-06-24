@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     top: 50,
     fontSize: 50,
     fontStyle: 'italic',
+    fontFamily: 'Roboto-Italic',
     color: "#FFFFFF"
   },
   container: {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: "#FFFFFF",
     fontSize: 20,
-    //fontFamily: 'Roboto-Regular'
+    fontFamily: 'Roboto-Regular'
   },
   buttonView: {
     width: 200,

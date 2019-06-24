@@ -7,7 +7,6 @@ import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 
 const AppNavigator = createStackNavigator({
   Home: { screen: MenuScreen },
@@ -19,8 +18,6 @@ const AppNavigator = createStackNavigator({
 });
 
 const AppNavigatorContainer = createAppContainer(AppNavigator);
-
-//export default App;
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -45,8 +42,11 @@ export default function App(props) {
 
 async function loadResourcesAsync() {
   await Promise.all([
+    Asset.loadAsync([
+    ]),
     Font.loadAsync({
       'Roboto-Regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
+      'Roboto-Italic': require('./assets/fonts/Roboto/Roboto-Italic.ttf'),
     }),
   ]);
 }
@@ -54,7 +54,8 @@ async function loadResourcesAsync() {
 function handleLoadingError(error: Error) {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
-  console.warn(error);
+  //console.warn(error);
+  console.error(error);
 }
 
 function handleFinishLoading(setLoadingComplete) {
