@@ -1,6 +1,7 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import MenuScreen from './screens/MenuScreen';
 import GameScreen from './screens/GameScreen';
+import QR from './screens/QRScreen'
 
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
@@ -10,7 +11,8 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 
 const AppNavigator = createStackNavigator({
   Home: { screen: MenuScreen },
-  Game: { screen: GameScreen }
+  Game: { screen: GameScreen },
+  QR: { screen: QR}
 },   
 {
   mode: 'modal',
