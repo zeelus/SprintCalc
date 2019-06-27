@@ -1,8 +1,12 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 import MenuScreen from './screens/MenuScreen';
 import GameInfoScreen from './screens/GameInfoScreen';
 import GameScreen from './screens/GameScreen';
 import QR from './screens/QRScreen'
+import friendReducer from './reducers/GameReducer'
 
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
@@ -20,6 +24,8 @@ const AppNavigator = createStackNavigator({
   mode: 'modal',
   headerMode: 'none',
 });
+
+const store = createStore(friendReducer);
 
 const AppNavigatorContainer = createAppContainer(AppNavigator);
 
@@ -40,10 +46,12 @@ export default function App(props) {
     );
   } else {
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigatorContainer />
-      </View>
+      <Provider store={store} >
+        <View style={styles.container}>
+          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+          <AppNavigatorContainer />
+        </View>
+      </Provider>
     );
   }
 }

@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 
 import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addAmound } from '../reducers/GameAction'
+
 import ListComponent from '../components/ProjectListCellComponent'
 
-export default class GameScreen extends Component {
+class GameScreenInfo extends Component {
 
     constructor(props) {
         super(props);
@@ -20,12 +24,16 @@ export default class GameScreen extends Component {
         this.props.navigation.push('QR')
     }
 
+    nextRound = () => {
+        this.props.addAmound(500);
+    }
+
     render() {
         return(
             <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
                 <View style={{flexDirection: 'row'}}>
                     <View style={{flex: 1, height: 70}} >
-                        <Text style={styles.amound}>1000$</Text>
+                        <Text style={styles.amound}>{this.props.game.amound}$</Text>
                     </View>
                     <View style={styles.buttonView}> 
                         <Text style={styles.button} onPress={this.showQRScreen}>QR</Text>
@@ -39,7 +47,7 @@ export default class GameScreen extends Component {
                 </View>
                 <View style={{ flexDirection: 'row'}}>
                     <View style={styles.buttonView2}> 
-                        <Text style={styles.button} onPress={this.showQRScreen}>Next round</Text>
+                        <Text style={styles.button} onPress={this.nextRound}>Next round</Text>
                     </View>
                 </View>
             </SafeAreaView>
@@ -84,3 +92,16 @@ const styles = StyleSheet.create({
         margin: 10
       },
   });
+
+  const mapDispatchToProps = dispatch => (
+    bindActionCreators({
+      addAmound,
+    }, dispatch)
+  );
+
+  const mapStateToProps = (state) => {
+    const { game } = state
+    return { game }
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(GameScreenInfo);
