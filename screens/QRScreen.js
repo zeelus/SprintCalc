@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, StyleSheet, Button} from 'react-native';
+import {Text, View, StyleSheet, Button, SafeAreaView} from 'react-native';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
 
@@ -24,10 +24,18 @@ export default class BarcodeScannerExample extends React.Component {
     const { hasCameraPermission, scanned } = this.state;
 
     if (hasCameraPermission === null) {
-      return <Text>Requesting for camera permission</Text>;
+      return (
+        <SafeAreaView>
+          <Text>Requesting for camera permission</Text>
+        </SafeAreaView>
+      );
     }
     if (hasCameraPermission === false) {
-      return <Text>No access to camera</Text>;
+      return (
+        <SafeAreaView>
+          <Text>No access to camera</Text>
+        </SafeAreaView>
+      );
     }
     return (
       <View
