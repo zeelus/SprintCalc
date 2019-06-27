@@ -1,34 +1,34 @@
 export default class Score {
 
-    #_money = 1000;
-    #_projectsStarted = 0;
-    #_projectsDone = 0;
+    #money = 1000;
+    #projectsStarted = 0;
+    #projectsDone = 0;
 
     constructor() {
         // ...
     }
 
     get money() {
-        return this.#_money;
+        return this.#money;
     }
 
     get projectsStarted() {
-        return this.#_projectsStarted;
+        return this.#projectsStarted;
     }
 
     get projectsDone() {
-        return this.#_projectsDone;
+        return this.#projectsDone;
     }
 
     set money(value) {
-        this.#_money = value;
+        this.#money = value;
     }
 
     set projectsStarted(value) {
-        this.#_projectsStarted = value;
+        this.#projectsStarted = value;
     }
 
     set projectsDone(value) {
-        this.#_projectsDone = value;
+        this.#projectsDone = value;
     }
 }

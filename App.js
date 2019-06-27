@@ -14,7 +14,7 @@ const AppNavigator = createStackNavigator({
   Home: { screen: MenuScreen },
   Info: { screen: GameInfoScreen},
   Game: { screen: GameScreen },
-  QR: { screen: QR}
+  QR: { screen: QR }
 },   
 {
   mode: 'modal',
@@ -31,7 +31,11 @@ export default function App(props) {
       <AppLoading
         startAsync={loadResourcesAsync}
         onError={handleLoadingError}
-        onFinish={() => {handleFinishLoading(setLoadingComplete)} }
+        onFinish={() => {
+          console.log("finished loading");
+          // prepare game logic objects: EventsRepository, ProjectsRepository and DevelopersRepository
+          handleFinishLoading(setLoadingComplete);
+        }}
       />
     );
   } else {
