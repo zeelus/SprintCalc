@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation';
 import GameScreenInfo from './GameScreenInfo';
 import GameScreenCVs from './GameScreenCVs';
 

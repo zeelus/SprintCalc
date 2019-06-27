@@ -1,5 +1,6 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import MenuScreen from './screens/MenuScreen';
+import GameInfoScreen from './screens/GameInfoScreen';
 import GameScreen from './screens/GameScreen';
 import QR from './screens/QRScreen'
 
@@ -11,6 +12,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 
 const AppNavigator = createStackNavigator({
   Home: { screen: MenuScreen },
+  Info: { screen: GameInfoScreen},
   Game: { screen: GameScreen },
   QR: { screen: QR}
 },   
@@ -29,7 +31,7 @@ export default function App(props) {
       <AppLoading
         startAsync={loadResourcesAsync}
         onError={handleLoadingError}
-        onFinish={() => handleFinishLoading(setLoadingComplete)}
+        onFinish={() => {handleFinishLoading(setLoadingComplete)} }
       />
     );
   } else {
