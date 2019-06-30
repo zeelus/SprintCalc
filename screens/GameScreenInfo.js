@@ -30,9 +30,9 @@ class GameScreenInfo extends Component {
     console.log(JSON.stringify(this.state.slidersFrontend));
 
     Object.entries(this.state.slidersBackend)
-      .forEach(([key, value]) => console.log(" => ", {key: value}));
+      .forEach(([key, value]) => console.log(" => ", {[key]: value}));
     Object.entries(this.state.slidersFrontend)
-      .forEach(([key, value]) => console.log(" => ", {key: value}));
+      .forEach(([key, value]) => console.log(" => ", {[key]: value}));
   };
 
   valueBackendDidChange = (item, value) => {
