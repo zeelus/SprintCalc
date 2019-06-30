@@ -8,11 +8,11 @@ export class Outcome {
     this.#timeInfluence = timeInfluence;
   }
 
-  get moneyInfluence() {
+  getMoneyInfluence() {
     return this.#moneyInfluence;
   }
 
-  get timeInfluence() {
+  getTimeInfluence() {
     return this.#timeInfluence;
   }
 
@@ -30,15 +30,15 @@ export default class Event {
     this.#outcome = outcome;
   }
 
-  get id() {
+  getId() {
     return this.#id;
   }
 
-  get outcome() {
+  getOutcome() {
     return this.#outcome;
   }
 
-  get name() {
+  getName() {
     return this.name;
   }
 

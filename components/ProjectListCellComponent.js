@@ -14,13 +14,13 @@ export default class ProjectListCellComponent extends Component {
             <View style={styles.cell}>
                 <Text style={styles.name}>{this.props.item.name}</Text>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
-                    <View style={{flexDirection: 'row'}}>
+                    <View style={{flexDirection: 'col'}}>
                         <Text style={styles.statText}>Backend</Text>
                         <Text style={styles.statText}>
                           {this.props.item.backendProgress}/{this.props.item.backendPowerRequired}
                         </Text>
                     </View>
-                    <View style={{flexDirection: 'row'}}>
+                    <View style={{flexDirection: 'col'}}>
                         <Text style={styles.statText}>Frontend</Text>
                         <Text style={styles.statText}>
                           {this.props.item.frontendProgress}/{this.props.item.frontendPowerRequired}

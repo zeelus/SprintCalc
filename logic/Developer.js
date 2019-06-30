@@ -12,19 +12,19 @@ export default class Developer {
     this.#frontendPower = frontendPower;
   }
 
-  get id() {
+  getId() {
     return this.#id;
   }
 
-  get cost() {
+  getCost() {
     return this.#cost;
   }
 
-  get backendPower() {
+  getBackendPower() {
     return this.#backendPower;
   }
 
-  get frontendPower() {
+  getFrontendPower() {
     return this.#frontendPower;
   }
 

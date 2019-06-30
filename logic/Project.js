@@ -16,39 +16,32 @@ export default class Project {
     this.duration = duration;
   }
 
-  get id() {
+  getId() {
     return this.id;
   }
 
-  // get backendProgress() {
-  //   return this.backendProgress;
-  // }
+  getBackendProgress() {
+    return this.backendProgress;
+  }
 
-  // get frontendProgress() {
-  //   return this.frontendProgress;
-  // }
+  getFrontendProgress() {
+    return this.frontendProgress;
+  }
 
-  // get name() {
-  //   return this.name;
-  // }
+  getName() {
+    return this.name;
+  }
 
-  // get backendPowerRequired() {
-  //   return this.backendPowerRequired;
-  // }
+  getBackendPowerRequired() {
+    return this.backendPowerRequired;
+  }
 
-  // get frontendPowerRequired() {
-  //   return this.frontendPowerRequired;
-  // }
+  getFrontendPowerRequired() {
+    return this.frontendPowerRequired;
+  }
 
-  // get duration() {
-  //   return this.duration;
-  // }
+  getDuration() {
+    return this.duration;
+  }
 
-  // set backendProgress(value) {
-  //   this.backendProgress = value;
-  // }
-
-  // set frontendProgress(value) {
-  //   this.rontendProgress = value;
-  // }
 }
