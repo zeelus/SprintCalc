@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import Slider from "react-native-slider";
-
 
 export default class ProjectListCellComponent extends Component {
 
@@ -12,20 +10,20 @@ export default class ProjectListCellComponent extends Component {
     render() {
         return(
             <View style={styles.cell}>
-                <Text style={styles.name}>{this.props.item.name}</Text>
-                <Text style={styles.subname}>{this.props.item.subname}</Text>
+                <Text style={styles.name}>Name: {this.props.item.getName()}</Text>
+                <Text style={styles.name}>Last name: {this.props.item.getLastname()}</Text>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Cost:</Text>
-                        <Text style={styles.statText}>200</Text>
+                    <View style={{flexDirection: 'col'}}>
+                        <Text style={styles.statText}>Cost: </Text>
+                        <Text style={styles.statText}>{this.props.item.getCost()}</Text>
                     </View>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Backend Power:</Text>
-                        <Text style={styles.statText}>20</Text>
+                    <View style={{flexDirection: 'col'}}>
+                        <Text style={styles.statText}>Backend: </Text>
+                        <Text style={styles.statText}>{this.props.item.getBackendPower()}</Text>
                     </View>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Frontend Power:</Text>
-                        <Text style={styles.statText}>300</Text>
+                    <View style={{flexDirection: 'col'}}>
+                        <Text style={styles.statText}>Frontend: </Text>
+                        <Text style={styles.statText}>{this.props.item.getFrontendPower()}</Text>
                     </View>
                 </View>
             </View>
