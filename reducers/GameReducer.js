@@ -1,17 +1,19 @@
 import { combineReducers } from 'redux';
-import { ADD_AMOUND } from './GameAction'
+import { ADD_AMOUNT } from './GameAction'
 
 const INITIAL_STATE = {
-    amound: 3000
+    balance: 3000
 };
 
 const gameReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-      case ADD_AMOUND:
-          const newState = { amound: state.amound + 100 }
-          return newState
+    case ADD_AMOUNT:
+      return {
+          ...state,
+          balance: state.balance + 100
+      };
     default:
-      return state
+      return state;
   }
 };
 

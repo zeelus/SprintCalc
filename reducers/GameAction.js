@@ -1,7 +1,9 @@
+export const ADD_AMOUNT = 'ADD_AMOUNT';
 
-export const ADD_AMOUND = 'ADD_AMOUND'
-
-export function addAmound(amound) {
-  return { type: ADD_AMOUND, amound }
+export function addAmount(balance) {
+  return {
+    type: ADD_AMOUNT,
+    balance
+  }
 }
 

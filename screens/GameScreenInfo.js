@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-
 import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addAmound } from '../reducers/GameAction'
-
+import { addAmount } from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 
 class GameScreenInfo extends Component {
@@ -25,7 +22,8 @@ class GameScreenInfo extends Component {
     }
 
     nextRound = () => {
-        this.props.addAmound(500);
+        console.log("nextRound");
+        this.props.addAmount(500);
     }
 
     render() {
@@ -33,7 +31,7 @@ class GameScreenInfo extends Component {
             <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
                 <View style={{flexDirection: 'row'}}>
                     <View style={{flex: 1, height: 70}} >
-                        <Text style={styles.amound}>{this.props.game.amound}$</Text>
+                        <Text style={styles.amount}>{this.props.game.balance}$</Text>
                     </View>
                     <View style={styles.buttonView}> 
                         <Text style={styles.button} onPress={this.showQRScreen}>QR</Text>
@@ -56,7 +54,7 @@ class GameScreenInfo extends Component {
 }
 
 const styles = StyleSheet.create({
-    amound: {
+    amount: {
       fontSize: 50,
       fontStyle: 'italic',
       fontFamily: 'Roboto-Italic',
@@ -95,12 +93,12 @@ const styles = StyleSheet.create({
 
   const mapDispatchToProps = dispatch => (
     bindActionCreators({
-      addAmound,
+        addAmount,
     }, dispatch)
   );
 
   const mapStateToProps = (state) => {
-    const { game } = state
+    const { game } = state;
     return { game }
   };
   
