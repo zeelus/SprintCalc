@@ -12,18 +12,18 @@ export default class ProjectListCellComponent extends Component {
     render() {
         return(
             <View style={styles.cell}>
-                <Text style={styles.name}>{this.props.item.project.name}</Text>
+                <Text style={styles.name}>{this.props.item.name}</Text>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
                     <View style={{flexDirection: 'row'}}>
                         <Text style={styles.statText}>Backend</Text>
                         <Text style={styles.statText}>
-                          {this.props.item.project.backendProgress}/{this.props.item.project.backendPowerRequired}
+                          {this.props.item.backendProgress}/{this.props.item.backendPowerRequired}
                         </Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
                         <Text style={styles.statText}>Frontend</Text>
                         <Text style={styles.statText}>
-                          {this.props.item.project.frontendProgress}/{this.props.item.project.frontendPowerRequired}
+                          {this.props.item.frontendProgress}/{this.props.item.frontendPowerRequired}
                         </Text>
                     </View>
                 </View>

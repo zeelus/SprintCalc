@@ -39,6 +39,7 @@ class GameScreenInfo extends Component {
                         renderItem={
                           ({item}) => <ListComponent item={item} />
                         }
+                        keyExtractor={(item, index) => index.toString()}
                     />
                 </View>
                 <View style={{ flexDirection: 'row'}}>
