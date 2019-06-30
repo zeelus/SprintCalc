@@ -7,6 +7,8 @@ export default class Project {
   #backendProgress = 0;
   #frontendProgress = 0;
   #duration = 1;
+  #backendProgressValue = 0.0;
+  #frontendProgressValue = 0.0;
 
   constructor(id, name, backendPowerRequired, frontendPowerRequired, duration) {
     this.#id = id;

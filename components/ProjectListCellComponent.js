@@ -29,12 +29,20 @@ export default class ProjectListCellComponent extends Component {
                 </View>
                     <View style = {{marginTop: 10}}>
                         <Text style={styles.statSliderText}>Backend Allocation</Text>
-                        <Slider>
+                        <Slider style={styles.sliderStyle} onSlidingComplete={
+                            (value) => {
+                                this.props.valueBackendDidChange(this.props.item, value)
+                            }
+                        }>
                         </Slider>
                     </View>
                     <View style = {{marginTop: 10}}>
                         <Text style={styles.statSliderText}>Frontend Allocation</Text>
-                        <Slider>
+                        <Slider style={styles.sliderStyle} onSlidingComplete={
+                            (value) => {
+                                this.props.valueFronendDidChange(this.props.item, value)
+                            }
+                        }>
                         </Slider>
                     </View>
             </View>
@@ -44,7 +52,10 @@ export default class ProjectListCellComponent extends Component {
 }
 
 const styles = StyleSheet.create({
-
+    sliderStyle:{
+        marginLeft: 20.0,
+        marginRight: 20.0
+    },
     cell: {
         //height: 300
     },

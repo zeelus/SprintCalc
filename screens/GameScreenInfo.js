@@ -9,8 +9,11 @@ class GameScreenInfo extends Component {
 
     constructor(props) {
         super(props);
-    
-        this.state = {};
+
+        this.state = {
+            slidersBackend: {},
+            slidersFrontend: {}
+        }
     }
 
     showQRScreen = () => {
@@ -20,6 +23,28 @@ class GameScreenInfo extends Component {
     nextRound = () => {
         console.log("nextRound");
         this.props.addAmount(500);
+    }
+
+    valueBackendDidChange = (item, value) => {
+
+        this.setState({
+            slidersBackend: {
+                ...this.state.slidersBackend,
+                [item.getId()]: value
+            }
+        });
+
+    }
+
+    valueFronendDidChange = (item, value) => {
+
+        this.setState({
+            slidersFrontend: {
+                ...this.state.sliders,
+                [item.getId()]: value
+            }
+        });
+
     }
 
     render() {
@@ -37,7 +62,11 @@ class GameScreenInfo extends Component {
                     <FlatList
                         data={this.props.game.projects}
                         renderItem={
-                          ({item}) => <ListComponent item={item} />
+                          ({item}) => <ListComponent 
+                            item={item} 
+                            valueBackendDidChange={this.valueBackendDidChange} 
+                            valueFronendDidChange={this.valueFronendDidChange}
+                          />
                         }
                         keyExtractor={(item, index) => index.toString()}
                     />
