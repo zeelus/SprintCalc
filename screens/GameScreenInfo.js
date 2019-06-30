@@ -66,6 +66,9 @@ class GameScreenInfo extends Component {
                             item={item} 
                             valueBackendDidChange={this.valueBackendDidChange} 
                             valueFronendDidChange={this.valueFronendDidChange}
+                            onPressDelate={() => {
+                                console.log(item.getId())
+                            }}
                           />
                         }
                         keyExtractor={(item, index) => index.toString()}

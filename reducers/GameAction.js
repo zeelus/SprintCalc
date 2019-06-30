@@ -6,4 +6,3 @@ export function addAmount(balance) {
     balance
   }
 }
-
