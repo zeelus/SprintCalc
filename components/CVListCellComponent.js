@@ -1,63 +1,68 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import Slider from "react-native-slider";
-
 
 export default class ProjectListCellComponent extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        return(
-            <View style={styles.cell}>
-                <Text style={styles.name}>{this.props.item.name}</Text>
-                <Text style={styles.subname}>{this.props.item.subname}</Text>
-                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Cost:</Text>
-                        <Text style={styles.statText}>200</Text>
-                    </View>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Backend Power:</Text>
-                        <Text style={styles.statText}>20</Text>
-                    </View>
-                    <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Frontend Power:</Text>
-                        <Text style={styles.statText}>300</Text>
-                    </View>
-                </View>
-            </View>
-        )
-    }
+  render() {
+    return (
+      <View style={styles.cell}>
+        <Text style={styles.name}>Name: {this.props.item.getName()}</Text>
+        <Text style={styles.name}>Last name: {this.props.item.getLastname()}</Text>
+        <View style={{
+          flex: 1,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginLeft: 20,
+          marginRight: 20,
+          marginTop: 20
+        }}>
+          <View style={{flexDirection: 'col'}}>
+            <Text style={styles.statText}>Cost: </Text>
+            <Text style={styles.statText}>{this.props.item.getCost()}</Text>
+          </View>
+          <View style={{flexDirection: 'col'}}>
+            <Text style={styles.statText}>Backend: </Text>
+            <Text style={styles.statText}>{this.props.item.getBackendPower()}</Text>
+          </View>
+          <View style={{flexDirection: 'col'}}>
+            <Text style={styles.statText}>Frontend: </Text>
+            <Text style={styles.statText}>{this.props.item.getFrontendPower()}</Text>
+          </View>
+        </View>
+      </View>
+    )
+  }
 
 }
 
 const styles = StyleSheet.create({
-    cell: {
-        marginTop: 20
-    },
-    name: {
-        fontFamily: 'Roboto-Italic',
-        fontSize: 35,
-        textAlign: 'center',
-        justifyContent: 'center'
-    },
-    subname: {
-        fontFamily: 'Roboto-Regular',
-        fontSize: 25,
-        textAlign: 'center',
-        justifyContent: 'center'
-    },
-    statText: {
-        fontFamily: 'Roboto-Regular',
-        fontSize: 20
-    },
-    statSliderText: {
-        fontFamily: 'Roboto-Regular',
-        fontSize: 15,
-        textAlign: 'center',
-    }
+  cell: {
+    marginTop: 20
+  },
+  name: {
+    fontFamily: 'Roboto-Italic',
+    fontSize: 35,
+    textAlign: 'center',
+    justifyContent: 'center'
+  },
+  subname: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: 25,
+    textAlign: 'center',
+    justifyContent: 'center'
+  },
+  statText: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: 20
+  },
+  statSliderText: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: 15,
+    textAlign: 'center',
+  }
 
 })
