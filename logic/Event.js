@@ -1,39 +1,45 @@
 export class Outcome {
 
-    #_moneyInfluence = 0;
-    #_timeInfluence = 0;
+  #moneyInfluence = 0;
+  #timeInfluence = 0;
 
-    constructor(moneyInfluence, timeInfluence) {
-        this.#_moneyInfluence = moneyInfluence;
-        this.#_timeInfluence = timeInfluence;
-    }
+  constructor(moneyInfluence, timeInfluence) {
+    this.#moneyInfluence = moneyInfluence;
+    this.#timeInfluence = timeInfluence;
+  }
 
-    get moneyInfluence() {
-        return this.#_moneyInfluence;
-    }
+  get moneyInfluence() {
+    return this.#moneyInfluence;
+  }
 
-    get timeInfluence() {
-        return this.#_timeInfluence;
-    }
+  get timeInfluence() {
+    return this.#timeInfluence;
+  }
 
 }
 
 export default class Event {
 
-    #_outcome;
-    _name = "";
+  #id = "";
+  name = "";
+  #outcome;
 
-    constructor(outcome, name) {
-        this._outcome = outcome;
-        this._name = name;
-    }
+  constructor(id, name, outcome) {
+    this.#id = id;
+    this.name = name;
+    this.#outcome = outcome;
+  }
 
-    get outcome() {
-        return this.#_outcome;
-    }
+  get id() {
+    return this.#id;
+  }
 
-    get name() {
-        return this._name;
-    }
+  get outcome() {
+    return this.#outcome;
+  }
+
+  get name() {
+    return this.name;
+  }
 
 }

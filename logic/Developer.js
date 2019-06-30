@@ -1,25 +1,31 @@
 export default class Developer {
 
-    #cost = 0;
-    #backendPower = 0;
-    #frontendPower = 0;
+  #id = "";
+  #cost = 0;
+  #backendPower = 0;
+  #frontendPower = 0;
 
-    constructor(cost, backendPower, frontendPower) {
-        this.#cost = cost;
-        this.#backendPower = backendPower;
-        this.#frontendPower = frontendPower;
-    }
+  constructor(id, cost, backendPower, frontendPower) {
+    this.#id = id;
+    this.#cost = cost;
+    this.#backendPower = backendPower;
+    this.#frontendPower = frontendPower;
+  }
 
-    get cost() {
-        return this.#cost;
-    }
+  get id() {
+    return this.#id;
+  }
 
-    get backendPower() {
-        return this.#backendPower;
-    }
+  get cost() {
+    return this.#cost;
+  }
 
-    get frontendPower() {
-        return this.#frontendPower;
-    }
+  get backendPower() {
+    return this.#backendPower;
+  }
+
+  get frontendPower() {
+    return this.#frontendPower;
+  }
 
 }

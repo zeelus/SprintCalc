@@ -1,49 +1,54 @@
-
 export default class Project {
 
-    name = "";
-    backendPowerRequired = 0;
-    frontendPowerRequired = 0;
-    #backendProgress = 0;
-    #frontendProgress = 0;
-    duration = 1;
+  id = "";
+  name = "";
+  backendPowerRequired = 0;
+  frontendPowerRequired = 0;
+  #backendProgress = 0;
+  #frontendProgress = 0;
+  duration = 1;
 
-    constructor(name, backendPowerRequired, frontendPowerRequired, duration) {
-        this.name = name;
-        this.backendPowerRequired = backendPowerRequired;
-        this.frontendPowerRequired = frontendPowerRequired;
-        this.duration = duration;
-    }
+  constructor(id, name, backendPowerRequired, frontendPowerRequired, duration) {
+    this.#id = id;
+    this.name = name;
+    this.backendPowerRequired = backendPowerRequired;
+    this.frontendPowerRequired = frontendPowerRequired;
+    this.duration = duration;
+  }
 
-    get backendProgress() {
-        return this.#backendProgress;
-    }
+  get id() {
+    return this.#id;
+  }
 
-    get frontendProgress() {
-        return this.#frontendProgress;
-    }
+  get backendProgress() {
+    return this.#backendProgress;
+  }
 
-    get name() {
-        return this.name;
-    }
+  get frontendProgress() {
+    return this.#frontendProgress;
+  }
 
-    get backendPowerRequired() {
-        return this.backendPowerRequired;
-    }
+  get name() {
+    return this.name;
+  }
 
-    get frontendPowerRequired() {
-        return this.frontendPowerRequired;
-    }
+  get backendPowerRequired() {
+    return this.backendPowerRequired;
+  }
 
-    get duration() {
-        return this.duration;
-    }
+  get frontendPowerRequired() {
+    return this.frontendPowerRequired;
+  }
 
-    set backendProgress(value) {
-        this.#backendProgress = value;
-    }
+  get duration() {
+    return this.duration;
+  }
 
-    set frontendProgress(value) {
-        this.#frontendProgress = value;
-    }
+  set backendProgress(value) {
+    this.#backendProgress = value;
+  }
+
+  set frontendProgress(value) {
+    this.#frontendProgress = value;
+  }
 }

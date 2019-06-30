@@ -16,15 +16,15 @@ export default class ProjectListCellComponent extends Component {
                 <Text style={styles.subname}>{this.props.item.subname}</Text>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat1:</Text>
+                        <Text style={styles.statText}>Cost:</Text>
                         <Text style={styles.statText}>200</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat2:</Text>
+                        <Text style={styles.statText}>Backend Power:</Text>
                         <Text style={styles.statText}>20</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat3:</Text>
+                        <Text style={styles.statText}>Frontend Power:</Text>
                         <Text style={styles.statText}>300</Text>
                     </View>
                 </View>

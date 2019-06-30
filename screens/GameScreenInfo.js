@@ -10,11 +10,7 @@ class GameScreenInfo extends Component {
     constructor(props) {
         super(props);
     
-        this.state = {
-          list: [{key: 'a', name: 'Projekt1', subname: 'Da da da, na na na'}, 
-          {key: 'b', name: 'Projekt2', subname: 'Da da da, na na na'}, 
-          {key: 'c', name: 'Projekt3', subname: 'Da da da, na na na'},],
-        };
+        this.state = {};
     }
 
     showQRScreen = () => {
@@ -39,8 +35,10 @@ class GameScreenInfo extends Component {
                 </View>
                 <View style={{flex: 1}}>
                     <FlatList
-                        data={this.state.list}
-                        renderItem={({item}) => <ListComponent item={item} /> }
+                        data={this.props.game.projects}
+                        renderItem={
+                          ({item}) => <ListComponent item={item} />
+                        }
                     />
                 </View>
                 <View style={{ flexDirection: 'row'}}>

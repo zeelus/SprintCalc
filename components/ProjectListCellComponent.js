@@ -12,36 +12,31 @@ export default class ProjectListCellComponent extends Component {
     render() {
         return(
             <View style={styles.cell}>
-                <Text style={styles.name}>{this.props.item.name}</Text>
-                <Text style={styles.subname}>{this.props.item.subname}</Text>
+                <Text style={styles.name}>{this.props.item.project.name}</Text>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, marginRight: 20, marginTop: 20}}>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat1:</Text>
-                        <Text style={styles.statText}>200</Text>
+                        <Text style={styles.statText}>Backend</Text>
+                        <Text style={styles.statText}>
+                          {this.props.item.project.backendProgress}/{this.props.item.project.backendPowerRequired}
+                        </Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat2:</Text>
-                        <Text style={styles.statText}>20</Text>
-                    </View><View style={{flexDirection: 'row'}}>
-                        <Text style={styles.statText}>Stat3:</Text>
-                        <Text style={styles.statText}>300</Text>
+                        <Text style={styles.statText}>Frontend</Text>
+                        <Text style={styles.statText}>
+                          {this.props.item.project.frontendProgress}/{this.props.item.project.frontendPowerRequired}
+                        </Text>
                     </View>
                 </View>
                     <View style = {{marginTop: 10}}>
-                        <Text style={styles.statSliderText}>Stat1</Text>
-                        <Slider></Slider>
+                        <Text style={styles.statSliderText}>Backend Allocation</Text>
+                        <Slider>
+                        </Slider>
                     </View>
                     <View style = {{marginTop: 10}}>
-                        <Text style={styles.statSliderText}>Stat2</Text>
-                        <Slider></Slider>
+                        <Text style={styles.statSliderText}>Frontend Allocation</Text>
+                        <Slider>
+                        </Slider>
                     </View>
-                    <View style = {{marginTop: 10}}>
-                        <Text style={styles.statSliderText}>Stat3</Text>
-                        <Slider></Slider>
-                    </View>
-                <View>
-
-                </View>
             </View>
         )
     }
@@ -49,6 +44,7 @@ export default class ProjectListCellComponent extends Component {
 }
 
 const styles = StyleSheet.create({
+
     cell: {
         //height: 300
     },
