@@ -17,13 +17,13 @@ export default class ProjectListCellComponent extends Component {
                     <View style={{flexDirection: 'col'}}>
                         <Text style={styles.statText}>Backend</Text>
                         <Text style={styles.statText}>
-                          {this.props.item.backendProgress}/{this.props.item.backendPowerRequired}
+                          {this.props.item.getBackendProgress()}/{this.props.item.getBackendPowerRequired()}
                         </Text>
                     </View>
                     <View style={{flexDirection: 'col'}}>
                         <Text style={styles.statText}>Frontend</Text>
                         <Text style={styles.statText}>
-                          {this.props.item.frontendProgress}/{this.props.item.frontendPowerRequired}
+                          {this.props.item.getFrontendProgress()}/{this.props.item.getFrontendPowerRequired()}
                         </Text>
                     </View>
                 </View>

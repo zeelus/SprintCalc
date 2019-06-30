@@ -21,12 +21,12 @@ export class Outcome {
 export default class Event {
 
   #id = "";
-  name = "";
+  #name = "";
   #outcome;
 
   constructor(id, name, outcome) {
     this.#id = id;
-    this.name = name;
+    this.#name = name;
     this.#outcome = outcome;
   }
 
@@ -39,7 +39,7 @@ export default class Event {
   }
 
   getName() {
-    return this.name;
+    return this.#name;
   }
 
 }

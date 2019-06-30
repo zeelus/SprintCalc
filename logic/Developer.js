@@ -1,12 +1,16 @@
 export default class Developer {
 
   #id = "";
+  #name = "";
+  #lastname = "";
   #cost = 0;
   #backendPower = 0;
   #frontendPower = 0;
 
-  constructor(id, cost, backendPower, frontendPower) {
+  constructor(id, name, lastname, cost, backendPower, frontendPower) {
     this.#id = id;
+    this.#name = name;
+    this.#lastname = lastname;
     this.#cost = cost;
     this.#backendPower = backendPower;
     this.#frontendPower = frontendPower;
@@ -14,6 +18,14 @@ export default class Developer {
 
   getId() {
     return this.#id;
+  }
+
+  getName() {
+    return this.#name;
+  }
+
+  getLastname() {
+    return this.#lastname;
   }
 
   getCost() {

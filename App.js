@@ -4,9 +4,9 @@ import { createStore } from 'redux';
 
 import MenuScreen from './screens/MenuScreen';
 import GameInfoScreen from './screens/GameInfoScreen';
-import GameScreen from './screens/GameScreen';
+import GameTabNavigator from './screens/GameTabNavigator';
 import QR from './screens/QRScreen'
-import friendReducer from './reducers/GameReducer'
+import gameReducer from './reducers/GameReducer'
 
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
@@ -17,7 +17,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 const AppNavigator = createStackNavigator({
   Home: { screen: MenuScreen },
   Info: { screen: GameInfoScreen},
-  Game: { screen: GameScreen },
+  Game: { screen: GameTabNavigator },
   QR: { screen: QR }
 },   
 {
@@ -25,7 +25,7 @@ const AppNavigator = createStackNavigator({
   headerMode: 'none',
 });
 
-const store = createStore(friendReducer);
+const store = createStore(gameReducer);
 
 const AppNavigatorContainer = createAppContainer(AppNavigator);
 

@@ -1,47 +1,47 @@
 export default class Project {
 
-  id = "";
-  name = "";
-  backendPowerRequired = 0;
-  frontendPowerRequired = 0;
-  backendProgress = 0;
-  frontendProgress = 0;
-  duration = 1;
+  #id = "";
+  #name = "";
+  #backendPowerRequired = 0;
+  #frontendPowerRequired = 0;
+  #backendProgress = 0;
+  #frontendProgress = 0;
+  #duration = 1;
 
   constructor(id, name, backendPowerRequired, frontendPowerRequired, duration) {
-    this.id = id;
-    this.name = name;
-    this.backendPowerRequired = backendPowerRequired;
-    this.frontendPowerRequired = frontendPowerRequired;
-    this.duration = duration;
+    this.#id = id;
+    this.#name = name;
+    this.#backendPowerRequired = backendPowerRequired;
+    this.#frontendPowerRequired = frontendPowerRequired;
+    this.#duration = duration;
   }
 
   getId() {
-    return this.id;
+    return this.#id;
   }
 
   getBackendProgress() {
-    return this.backendProgress;
+    return this.#backendProgress;
   }
 
   getFrontendProgress() {
-    return this.frontendProgress;
+    return this.#frontendProgress;
   }
 
   getName() {
-    return this.name;
+    return this.#name;
   }
 
   getBackendPowerRequired() {
-    return this.backendPowerRequired;
+    return this.#backendPowerRequired;
   }
 
   getFrontendPowerRequired() {
-    return this.frontendPowerRequired;
+    return this.#frontendPowerRequired;
   }
 
   getDuration() {
-    return this.duration;
+    return this.#duration;
   }
 
 }
