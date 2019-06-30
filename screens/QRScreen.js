@@ -16,12 +16,12 @@ export default class BarcodeScannerExample extends React.Component {
   }
 
   getPermissionsAsync = async () => {
-    const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === 'granted' });
+    const {status} = await Permissions.askAsync(Permissions.CAMERA);
+    this.setState({hasCameraPermission: status === 'granted'});
   };
 
   render() {
-    const { hasCameraPermission, scanned } = this.state;
+    const {hasCameraPermission, scanned} = this.state;
 
     if (hasCameraPermission === null) {
       return (
@@ -50,14 +50,14 @@ export default class BarcodeScannerExample extends React.Component {
         />
 
         {scanned && (
-          <Button title={'Tap to Scan Again'} onPress={() => this.setState({ scanned: false })} />
+          <Button title={'Tap to Scan Again'} onPress={() => this.setState({scanned: false})}/>
         )}
       </View>
     );
   }
 
-  handleBarCodeScanned = ({ type, data }) => {
-    this.setState({ scanned: true });
+  handleBarCodeScanned = ({type, data}) => {
+    this.setState({scanned: true});
     this.props.navigation.goBack();
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };

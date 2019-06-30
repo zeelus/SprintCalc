@@ -15,7 +15,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={styles.container} start={{x: 1, y:1}} end={{x: 0, y:0}} >
+      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={styles.container}
+                      start={{x: 1, y: 1}} end={{x: 0, y: 0}}>
         <Text style={styles.welcome}>SprintCalc</Text>
         <View style={styles.buttonView}>
           <Text style={styles.button} onPress={this.onStartGameButtonPressed}>Start Game</Text>
@@ -26,5 +27,5 @@ export default class App extends Component {
       </LinearGradient>
     );
   }
-  
+
 }
