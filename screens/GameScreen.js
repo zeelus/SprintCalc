@@ -6,7 +6,7 @@ import {addAmount} from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
 
-class GameScreenInfo extends Component {
+class GameScreen extends Component {
 
   constructor(props) {
     super(props);
@@ -161,4 +161,4 @@ const mapStateToProps = (state) => {
   return {game}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(GameScreenInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(GameScreen);
