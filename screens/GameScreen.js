@@ -7,7 +7,7 @@ import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient'
 
-class GameScreenInfo extends Component {
+class GameScreen extends Component {
 
   constructor(props) {
     super(props);
@@ -168,4 +168,4 @@ const mapStateToProps = (state) => {
   return {game}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(GameScreenInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(GameScreen);

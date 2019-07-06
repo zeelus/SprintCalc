@@ -1,9 +1,9 @@
 import {createBottomTabNavigator} from 'react-navigation';
-import GameScreenInfo from './GameScreenInfo';
+import GameScreen from './GameScreen';
 import GameScreenCV from './GameScreenCV';
 
 const TabNavigator = createBottomTabNavigator({
-  Info: GameScreenInfo,
+  Info: GameScreen,
   CVs: GameScreenCV
 });
 
