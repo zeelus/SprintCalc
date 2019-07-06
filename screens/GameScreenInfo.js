@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {addAmount} from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient'
 
 class GameScreenInfo extends Component {
 
@@ -61,6 +62,7 @@ class GameScreenInfo extends Component {
 
   render() {
     return (
+      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={{flex: 1}}>
       <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
         <View style={{flexDirection: 'row'}}>
           <View style={{flex: 1, height: 70}}>
@@ -99,6 +101,8 @@ class GameScreenInfo extends Component {
                 }}
               />
             }
+            contentInset={{bottom:49}}
+            automaticallyAdjustContentInsets={false}
             keyExtractor={(item, index) => index.toString()}
           />
         </View>
@@ -108,6 +112,8 @@ class GameScreenInfo extends Component {
           </View>
         </View>
       </SafeAreaView>
+      </LinearGradient>
+      
     )
   }
 }
@@ -117,6 +123,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontStyle: 'italic',
     fontFamily: 'Roboto-Italic',
+    color: '#FFFFFF',
     margin: 10
   },
   container: {

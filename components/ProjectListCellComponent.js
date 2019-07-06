@@ -18,7 +18,8 @@ export default class ProjectListCellComponent extends Component {
           backgroundColor: 'red',
           onPress: this.props.onPressDelete
         }
-      ]} style={styles.swipeout}>
+      ]
+      } style={styles.swipeout}>
         <View style={styles.cell}>
           <Text style={styles.name}>{this.props.item.getName()}</Text>
           <View style={{
@@ -69,7 +70,7 @@ export default class ProjectListCellComponent extends Component {
 
 const styles = StyleSheet.create({
   swipeout: {
-    backgroundColor: '#FFFFFF'
+    backgroundColor: 'transparent'
   },
   sliderStyle: {
     marginLeft: 20.0,
@@ -77,6 +78,12 @@ const styles = StyleSheet.create({
   },
   cell: {
     //height: 300
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 20,
+    backgroundColor: '#FFFFFF'
   },
   name: {
     fontFamily: 'Roboto-Italic',

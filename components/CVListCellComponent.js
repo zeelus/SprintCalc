@@ -41,13 +41,17 @@ export default class ProjectListCellComponent extends Component {
 
 const styles = StyleSheet.create({
   cell: {
-    marginTop: 20
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 20,
+    backgroundColor: '#FFFFFF'
   },
   name: {
     fontFamily: 'Roboto-Italic',
     fontSize: 35,
     textAlign: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   subname: {
     fontFamily: 'Roboto-Regular',
