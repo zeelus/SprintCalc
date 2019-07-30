@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Image} from 'react-native';
 
 export default class ProjectListCellComponent extends Component {
 
@@ -10,6 +10,12 @@ export default class ProjectListCellComponent extends Component {
   render() {
     return (
       <View style={styles.cell}>
+        <View>
+          <Image
+            style={styles.image}
+            source={require('../assets/images/1.png')}
+          />
+        </View>
         <Text style={styles.name}>Name: {this.props.item.getName()}</Text>
         <Text style={styles.name}>Last name: {this.props.item.getLastname()}</Text>
         <View style={{
@@ -67,6 +73,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Regular',
     fontSize: 15,
     textAlign: 'center',
+  },
+  image: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 
 })
