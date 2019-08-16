@@ -4,8 +4,10 @@ import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
 
 import {BarCodeScanner} from 'expo-barcode-scanner';
+import {addBalance} from "../reducers/GameAction";
+import {connect} from "react-redux";
 
-export default class BarcodeScannerExample extends React.Component {
+export default class BarcodeScanner extends React.Component {
   state = {
     hasCameraPermission: null,
     scanned: false,
@@ -62,3 +64,16 @@ export default class BarcodeScannerExample extends React.Component {
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };
 }
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    addAmount: addBalance,
+  }, dispatch)
+);
+
+const mapStateToProps = (state) => {
+  const {player, game} = state;
+  return {player, game}
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BarcodeScanner);

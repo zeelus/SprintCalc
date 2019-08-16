@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, SafeAreaView, FlatList, Alert} from 'react-native';
+import {SafeAreaView, FlatList, Alert} from 'react-native';
 import CVCell from '../components/CVListCellComponent'
-import {addAmount} from "../reducers/GameAction";
+import {addBalance} from "../reducers/GameAction";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import {LinearGradient} from 'expo-linear-gradient'
@@ -18,7 +18,7 @@ class GameScreenCV extends Component {
       <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={{flex: 1}}>
         <SafeAreaView style={{flex: 1}}>
           <FlatList
-            data={this.props.game.developers}
+            data={this.props.player.developers}
             renderItem={({item}) =>
               <CVCell
                 onPressDelete={() => {
@@ -52,13 +52,13 @@ class GameScreenCV extends Component {
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    addAmount,
+    addAmount: addBalance,
   }, dispatch)
 );
 
 const mapStateToProps = (state) => {
-  const {game} = state;
-  return {game}
+  const {player} = state;
+  return {player}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameScreenCV);

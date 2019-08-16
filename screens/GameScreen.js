@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addAmount} from '../reducers/GameAction'
+import {addBalance} from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient'
@@ -64,7 +64,7 @@ class GameScreen extends Component {
       <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
         <View style={{flexDirection: 'row'}}>
           <View style={{flex: 1, height: 70}}>
-            <Text style={styles.amount}>{this.props.game.balance}$</Text>
+            <Text style={styles.amount}>{this.props.player.balance}$</Text>
           </View>
           <View style={styles.buttonView}>
             <Text style={styles.button} onPress={this.showQRScreen}>QR</Text>
@@ -72,7 +72,7 @@ class GameScreen extends Component {
         </View>
         <View style={{flex: 1}}>
           <FlatList
-            data={this.props.game.projects}
+            data={this.props.player.projects}
             renderItem={
               ({item}) => <ListComponent
                 item={item}
@@ -157,13 +157,13 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    addAmount,
+    addAmount: addBalance,
   }, dispatch)
 );
 
 const mapStateToProps = (state) => {
-  const {game} = state;
-  return {game}
+  const {player} = state;
+  return {player}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameScreen);

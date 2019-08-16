@@ -4,17 +4,16 @@ import Event from "../logic/Event"
 import ImageData from "../logic/ImageData"
 
 import {combineReducers} from 'redux';
-import {ADD_AMOUNT} from './GameAction'
+import {ADD_BALANCE, SUBTRACT_BALANCE} from './GameAction'
 
-function initBalance() {
-  return 3000;
-}
+/* Global Store */
 
 const initProjects = () => {
   try {
     var projects = [];
     const projectObjects = require('../assets/data/projects.json');
-    projectObjects.forEach((item) => {projects.push(Object.assign(new Project(), item))});
+    projectObjects
+      .forEach((item) => {projects.push(Object.assign(new Project(), item))});
     console.log(projects);
     return projects;
   } catch (error) {
@@ -27,7 +26,8 @@ const initDevelopers = () => {
   try {
     var developers = [];
     const developerObjects = require('../assets/data/developers.json');
-    developerObjects.forEach((item) => {developers.push(Object.assign(new Developer(), item))});
+    developerObjects
+      .forEach((item) => {developers.push(Object.assign(new Developer(), item))});
     console.log(developers);
     return developers;
   } catch (error) {
@@ -40,7 +40,8 @@ const initEvents = () => {
   try {
     var events = [];
     const eventObjects = require('../assets/data/events.json');
-    eventObjects.forEach((item) => {events.push(Object.assign(new Event(), item))});
+    eventObjects
+      .forEach((item) => {events.push(Object.assign(new Event(), item))});
     console.log(events);
     return events;
   } catch (error) {
@@ -62,29 +63,56 @@ const initImageCache = () => {
     console.error(error);
     exit(1);
   }
-}
+};
 
-const INITIAL_STATE = {
-  balance: initBalance(),
+const INIT_GLOBAL_STORE = {
   projects: initProjects(),
   developers: initDevelopers(),
   events: initEvents(),
   imageCache: initImageCache()
 };
 
-const gameReducer = (state = INITIAL_STATE, action) => {
+const gameReducer = (state = INIT_GLOBAL_STORE, action) => {
   switch (action.type) {
-    case ADD_AMOUNT:
+    default:
+      return state;
+  }
+};
+
+/* Player's Store */
+
+const initPlayerBalance = () => {
+  return 5000;
+};
+
+const INITIAL_STATE = {
+  balance: initPlayerBalance(),
+  projects: [],
+  developers: [],
+  events: []
+};
+
+const playerReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case ADD_BALANCE:
       return {
         ...state,
         balance: state.balance + action.balance
+      };
+    case SUBTRACT_BALANCE:
+      return {
+        ...state,
+        balance: state.balance - action.balance
       };
     default:
       return state;
   }
 };
 
+/* Store Register */
+
 export default combineReducers({
   game: gameReducer,
+  player: playerReducer
 });
 
