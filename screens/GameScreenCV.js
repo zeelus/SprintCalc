@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
+import {StyleSheet, View, Text, SafeAreaView, FlatList, Alert} from 'react-native';
 import CVCell from '../components/CVListCellComponent'
 import {addAmount} from "../reducers/GameAction";
 import {connect} from "react-redux";
@@ -19,7 +19,29 @@ class GameScreenCV extends Component {
         <SafeAreaView style={{flex: 1}}>
           <FlatList
             data={this.props.game.developers}
-            renderItem={({item}) => <CVCell item={item}/>}
+            renderItem={({item}) =>
+              <CVCell
+                onPressDelete={() => {
+                  console.log("delete id: " + item.getId());
+                  // todo: handle delete project confirmation
+                  Alert.alert(
+                    'Delete project confirm',
+                    'Project will be permanently deleted',
+                    [
+                      {
+                        text: 'Cancel',
+                        onPress: () => console.log('Cancel Pressed'),
+                        style: 'cancel',
+                      },
+                      {
+                        text: 'OK',
+                        onPress: () => console.log('OK Pressed')},
+                    ],
+                    {cancelable: false},
+                  );
+                }}
+                item={item}/>
+            }
             keyExtractor={(item, index) => index.toString()}
           />
         </SafeAreaView>

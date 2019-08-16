@@ -79,7 +79,7 @@ class GameScreen extends Component {
                 valueBackendDidChange={this.valueBackendDidChange}
                 valueFrontendDidChange={this.valueFrontendDidChange}
                 onPressDelete={() => {
-                  console.log(item.getId());
+                  console.log("delete id: " + item.getId());
                   // todo: handle delete project confirmation
                   Alert.alert(
                     'Delete project confirm',

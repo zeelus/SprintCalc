@@ -3,7 +3,6 @@ import {StyleSheet, View, Text} from 'react-native';
 import Slider from "react-native-slider";
 import Swipeout from 'react-native-swipeout';
 
-
 export default class ProjectListCellComponent extends Component {
 
   constructor(props) {

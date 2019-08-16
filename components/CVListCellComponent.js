@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
-import {addAmount} from "../reducers/GameAction";
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import Swipeout from 'react-native-swipeout';
 
 export class ProjectListCellComponent extends Component {
 
@@ -12,6 +11,14 @@ export class ProjectListCellComponent extends Component {
 
   render() {
     return (
+      <Swipeout right={[
+        {
+          text: 'Delete',
+          backgroundColor: 'red',
+          onPress: this.props.onPressDelete
+        }
+        ]
+      } style={styles.swipeout}>
       <View style={styles.cell}>
         <View>
           <Image
@@ -51,6 +58,7 @@ export class ProjectListCellComponent extends Component {
           </View>
         </View>
       </View>
+      </Swipeout>
     )
   }
 
@@ -64,6 +72,9 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(ProjectListCellComponent);
 
 const styles = StyleSheet.create({
+  swipeout: {
+    backgroundColor: 'transparent'
+  },
   cell: {
     marginTop: 20,
     marginLeft: 10,
