@@ -3,8 +3,8 @@ import GameScreen from './GameScreen';
 import GameScreenCV from './GameScreenCV';
 
 const TabNavigator = createBottomTabNavigator({
-  Info: GameScreen,
-  CVs: GameScreenCV
+  Projects: GameScreen,
+  Employees: GameScreenCV
 });
 
 export default TabNavigator

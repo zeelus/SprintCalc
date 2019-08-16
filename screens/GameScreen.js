@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addBalance} from '../reducers/GameAction'
+import {nextRound, addBalance} from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient'
@@ -23,9 +23,9 @@ class GameScreen extends Component {
   };
 
   nextRound = () => {
-    console.log("nextRound");
+    console.log("nextRound: " + this.props.player.round);
 
-    this.props.addAmount(500);
+    this.props.next();
 
     console.log(JSON.stringify(this.state.slidersBackend));
     console.log(JSON.stringify(this.state.slidersFrontend));
@@ -63,7 +63,10 @@ class GameScreen extends Component {
       <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={{flex: 1}}>
       <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
         <View style={{flexDirection: 'row'}}>
-          <View style={{flex: 1, height: 70}}>
+          <View style={{flex: 1, height: 70, width: 30}}>
+            <Text style={styles.amount}>{this.props.player.round}</Text>
+          </View>
+          <View style={{flex: 2, height: 70}}>
             <Text style={styles.amount}>{this.props.player.balance}$</Text>
           </View>
           <View style={styles.buttonView}>
@@ -122,7 +125,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     fontFamily: 'Roboto-Italic',
     color: '#FFFFFF',
-    margin: 10
+    alignItems: 'flex-start',
+    margin: 5
   },
   container: {
     flex: 1,
@@ -137,12 +141,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Regular'
   },
   buttonView: {
-    width: 150,
+    width: 60,
     height: 60,
     backgroundColor: '#00C9A7',
     justifyContent: 'center',
-    borderRadius: 30,
-    margin: 10
+    borderRadius: 10,
+    margin: 5
   },
   buttonView2: {
     flex: 1,
@@ -157,7 +161,7 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    addAmount: addBalance,
+    next: nextRound
   }, dispatch)
 );
 

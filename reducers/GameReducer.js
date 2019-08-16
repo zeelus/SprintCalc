@@ -4,7 +4,7 @@ import Event from "../logic/Event"
 import ImageData from "../logic/ImageData"
 
 import {combineReducers} from 'redux';
-import {ADD_BALANCE, SUBTRACT_BALANCE} from './GameAction'
+import {NEXT_ROUND, ADD_BALANCE, SUBTRACT_BALANCE, ADD_DEVELOPER, ADD_PROJECT} from './GameAction'
 
 /* Global Store */
 
@@ -87,6 +87,7 @@ const initPlayerBalance = () => {
 
 const INITIAL_STATE = {
   balance: initPlayerBalance(),
+  round: 1,
   projects: [],
   developers: [],
   events: []
@@ -94,6 +95,22 @@ const INITIAL_STATE = {
 
 const playerReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case NEXT_ROUND:
+      return {
+        ...state,
+        round: state.round + 1
+      };
+    case ADD_DEVELOPER:
+      return {
+        ...state,
+        developers: [...state.developers, action.developer]
+      };
+    case ADD_PROJECT:
+      console.log("dupa");
+      return {
+        ...state,
+        projects: [...state.projects, action.project]
+      };
     case ADD_BALANCE:
       return {
         ...state,

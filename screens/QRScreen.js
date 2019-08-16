@@ -1,13 +1,12 @@
 import * as React from 'react';
-import {Text, View, StyleSheet, Button, SafeAreaView} from 'react-native';
-import Constants from 'expo-constants';
+import {Text, View, StyleSheet, Button, SafeAreaView, Alert} from 'react-native';
 import * as Permissions from 'expo-permissions';
-
 import {BarCodeScanner} from 'expo-barcode-scanner';
-import {addBalance} from "../reducers/GameAction";
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {addDeveloper, addProject} from '../reducers/GameAction'
 
-export default class BarcodeScanner extends React.Component {
+export class BarcodeScanner extends React.Component {
   state = {
     hasCameraPermission: null,
     scanned: false,
@@ -51,23 +50,98 @@ export default class BarcodeScanner extends React.Component {
           style={StyleSheet.absoluteFillObject}
         />
 
-        {scanned && (
-          <Button title={'Tap to Scan Again'} onPress={() => this.setState({scanned: false})}/>
-        )}
+        {
+          scanned &&
+          (<Button title={'Tap to Scan Again'} onPress={() => this.setState({scanned: false})}/>)
+        }
       </View>
     );
   }
 
+  findProject = (uuid) => {
+    return this.props.game.projects.findIndex((e) => e.getId() === uuid);
+  };
+
+  findDeveloper = (uuid) => {
+    return this.props.game.developers.findIndex((e) => e.getId() === uuid);
+  };
+
+  findEvent = (uuid) => {
+    return this.props.game.events.findIndex((e) => e.getId() === uuid);
+  };
+
   handleBarCodeScanned = ({type, data}) => {
     this.setState({scanned: true});
     this.props.navigation.goBack();
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+
+    const projectIndex = this.findProject(data);
+    if (projectIndex !== -1) {
+      const project = this.props.game.projects[projectIndex];
+      Alert.alert(
+        `Do you want to add project: ${project.getName()}?`,
+        `Statistics:\n
+        Backend: ${project.getBackendPowerRequired()}\n
+        Fronted: ${project.getFrontendPowerRequired()}\n
+        Income: ${project.getIncome()}\n
+        Duration: ${project.getDuration()}`,
+        [
+          {
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel',
+          }, {
+            text: 'OK',
+            onPress: () => {
+              console.log('OK Pressed: Adding Project...');
+              this.props.addProj(project);
+            }},
+        ],
+        {cancelable: false},
+      );
+      return;
+    }
+
+    const developerIndex = this.findDeveloper(data);
+    console.log("dupa!!! " + data);
+    if (developerIndex !== -1) {
+      console.log("dupa!!! " + data);
+
+      const developer = this.props.game.developers[developerIndex];
+      Alert.alert(
+        `Do you want to add a new developer: ${developer.getName()} ${developer.getLastName()}?`,
+        `Statistics:\n
+        Backend: ${developer.getBackendPower()}\n
+        Frontend: ${developer.getFrontendPower()}\n
+        Cost: $${developer.getCost()}/tour`,
+        [
+          {
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel',
+          }, {
+            text: 'OK',
+            onPress: () => {
+              console.log('OK Pressed: Adding Developer...');
+              this.props.addDev(developer);
+            }},
+        ],
+        {cancelable: false},
+      );
+      return;
+    }
+
+    const eventIndex = this.findEvent(data);
+    if (eventIndex !== -1) {
+      const event = this.props.game.events[eventIndex];
+      return;
+    }
   };
 }
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    addAmount: addBalance,
+    addDev: addDeveloper,
+    addProj: addProject
   }, dispatch)
 );
 
