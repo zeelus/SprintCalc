@@ -4,7 +4,15 @@ import Event from "../logic/Event"
 import ImageData from "../logic/ImageData"
 
 import {combineReducers} from 'redux';
-import {NEXT_ROUND, ADD_BALANCE, SUBTRACT_BALANCE, ADD_DEVELOPER, ADD_PROJECT} from './GameAction'
+import {
+  NEXT_ROUND,
+  ADD_BALANCE,
+  SUBTRACT_BALANCE,
+  ADD_DEVELOPER,
+  ADD_PROJECT,
+  REMOVE_DEVELOPER,
+  REMOVE_PROJECT
+} from './GameAction'
 
 /* Global Store */
 
@@ -109,6 +117,16 @@ const playerReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         projects: [...state.projects, action.project]
+      };
+    case REMOVE_PROJECT:
+      return {
+        ...state,
+        projects: [...state.projects.filter((e) => e.getId() !== action.project.getId())]
+      };
+    case REMOVE_DEVELOPER:
+      return {
+        ...state,
+        developers: [...state.developers.filter((e) => e.getId() !== action.developer.getId())]
       };
     case ADD_BALANCE:
       return {

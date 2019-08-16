@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text, SafeAreaView, FlatList} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {nextRound, addBalance} from '../reducers/GameAction'
+import {nextRound, removeProject} from '../reducers/GameAction'
 import ListComponent from '../components/ProjectListCellComponent'
 import {Alert} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient'
@@ -83,19 +83,22 @@ class GameScreen extends Component {
                 valueFrontendDidChange={this.valueFrontendDidChange}
                 onPressDelete={() => {
                   console.log("delete id: " + item.getId());
-                  // todo: handle delete project confirmation
+                  const project = this.props.player.projects.find((e) => e.getId() === item.getId());
                   Alert.alert(
-                    'Delete project confirm',
-                    'Project will be permanently deleted',
+                    `Do you want to remove project ${project.getName()}`,
+                    `Project will ben deleted permanently`,
                     [
                       {
                         text: 'Cancel',
                         onPress: () => console.log('Cancel Pressed'),
                         style: 'cancel',
-                      },
-                      {
+                      }, {
                         text: 'OK',
-                        onPress: () => console.log('OK Pressed')},
+                        onPress: () => {
+                          console.log('OK Pressed');
+                          this.props.removeProj(project);
+                        }
+                      },
                     ],
                     {cancelable: false},
                   );
@@ -161,7 +164,8 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    next: nextRound
+    next: nextRound,
+    removeProj: removeProject
   }, dispatch)
 );
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {SafeAreaView, FlatList, Alert} from 'react-native';
 import CVCell from '../components/CVListCellComponent'
-import {addBalance} from "../reducers/GameAction";
+import {removeDeveloper} from "../reducers/GameAction";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import {LinearGradient} from 'expo-linear-gradient'
@@ -23,19 +23,22 @@ class GameScreenCV extends Component {
               <CVCell
                 onPressDelete={() => {
                   console.log("delete id: " + item.getId());
-                  // todo: handle delete project confirmation
+                  const developer = this.props.player.developers.find((e) => e.getId() === item.getId());
                   Alert.alert(
-                    'Delete project confirm',
-                    'Project will be permanently deleted',
+                    `Do you want to remove: ${developer.getName()} ${developer.getLastName()}`,
+                    `Developer will be removed permanently`,
                     [
                       {
                         text: 'Cancel',
                         onPress: () => console.log('Cancel Pressed'),
                         style: 'cancel',
-                      },
-                      {
+                      }, {
                         text: 'OK',
-                        onPress: () => console.log('OK Pressed')},
+                        onPress: () => {
+                          console.log('OK Pressed');
+                          this.props.removeDev(developer);
+                        }
+                      },
                     ],
                     {cancelable: false},
                   );
@@ -52,7 +55,7 @@ class GameScreenCV extends Component {
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    addAmount: addBalance,
+    removeDev: removeDeveloper,
   }, dispatch)
 );
 

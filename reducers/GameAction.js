@@ -36,9 +36,23 @@ export function addDeveloper(developer) {
   }
 }
 
+export function removeDeveloper(developer) {
+  return {
+    type: REMOVE_DEVELOPER,
+    developer
+  }
+}
+
 export function addProject(project) {
   return {
     type: ADD_PROJECT,
+    project
+  }
+}
+
+export function removeProject(project) {
+  return {
+    type: REMOVE_PROJECT,
     project
   }
 }
