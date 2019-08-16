@@ -106,7 +106,6 @@ const playerReducer = (state = INITIAL_STATE, action) => {
         developers: [...state.developers, action.developer]
       };
     case ADD_PROJECT:
-      console.log("dupa");
       return {
         ...state,
         projects: [...state.projects, action.project]

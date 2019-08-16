@@ -102,10 +102,7 @@ export class BarcodeScanner extends React.Component {
     }
 
     const developerIndex = this.findDeveloper(data);
-    console.log("dupa!!! " + data);
     if (developerIndex !== -1) {
-      console.log("dupa!!! " + data);
-
       const developer = this.props.game.developers[developerIndex];
       Alert.alert(
         `Do you want to add a new developer: ${developer.getName()} ${developer.getLastName()}?`,
