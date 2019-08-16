@@ -1,43 +1,53 @@
 export default class Developer {
+  #index = 0;
+  _id = "";
+  name = "";
+  lastName = "";
+  cost = 0;
+  backendPower = 0;
+  frontendPower = 0;
+  image = "";
 
-  #id = "";
-  #name = "";
-  #lastname = "";
-  #cost = 0;
-  #backendPower = 0;
-  #frontendPower = 0;
+  constructor(index, id, name, lastName, cost, backendPower, frontendPower, image) {
+    this.#index = index;
+    this._id = id;
+    this.name = name;
+    this.lastName = lastName;
+    this.cost = cost;
+    this.backendPower = backendPower;
+    this.frontendPower = frontendPower;
+    this.image = image;
+  }
 
-  constructor(id, name, lastname, cost, backendPower, frontendPower) {
-    this.#id = id;
-    this.#name = name;
-    this.#lastname = lastname;
-    this.#cost = cost;
-    this.#backendPower = backendPower;
-    this.#frontendPower = frontendPower;
+  getIndex() {
+    return this.#index;
   }
 
   getId() {
-    return this.#id;
+    return this._id;
   }
 
   getName() {
-    return this.#name;
+    return this.name;
   }
 
-  getLastname() {
-    return this.#lastname;
+  getLastName() {
+    return this.lastName;
   }
 
   getCost() {
-    return this.#cost;
+    return this.cost;
   }
 
   getBackendPower() {
-    return this.#backendPower;
+    return this.backendPower;
   }
 
   getFrontendPower() {
-    return this.#frontendPower;
+    return this.frontendPower;
   }
 
+  getImage() {
+    return this.image;
+  }
 }

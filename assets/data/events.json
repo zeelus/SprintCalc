@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "1882bb23-e824-4440-b263-9486d101052a",
+    "index": 0,
+    "name": "Event ...",
+    "about": "Qui aute cillum est excepteur Lorem dolor magna. Id reprehenderit consectetur cillum laborum duis ex nulla sit esse ipsum aliquip. Officia aute quis adipisicing adipisicing sint et commodo est voluptate deserunt nisi deserunt eiusmod culpa. Pariatur culpa dolor nisi aliquip et nostrud exercitation mollit. Ad ex aute id quis. Irure eu incididunt ut dolore ipsum aliquip cillum do laboris tempor anim reprehenderit officia.\r\n",
+    "moneyInfluence": 328,
+    "timeInfluence": -1
+  },
+  {
+    "_id": "4410e4b0-fcda-4679-af66-088679e6697e",
+    "index": 1,
+    "name": "Event ...",
+    "about": "Pariatur aliquip velit incididunt non dolore nostrud pariatur anim do mollit aute deserunt. Nulla magna ipsum elit sit aute nisi eu commodo excepteur. Excepteur excepteur enim nostrud id irure voluptate veniam consequat et cillum adipisicing.\r\n",
+    "moneyInfluence": 3384,
+    "timeInfluence": -1
+  },
+  {
+    "_id": "5ad545b4-3778-496f-8327-1304ac09d95a",
+    "index": 2,
+    "name": "Event ...",
+    "about": "Irure sit voluptate esse aute sunt magna Lorem consequat officia. Proident in proident tempor velit nulla. Velit ex sit tempor ad magna proident eu. Duis deserunt qui nisi reprehenderit laborum qui ut officia cupidatat esse irure deserunt proident excepteur. Id qui ex do est aliqua consequat. Officia enim non duis amet laboris qui magna in cillum deserunt amet labore. Proident velit eu sunt laborum quis reprehenderit cupidatat laboris esse Lorem dolor amet.\r\n",
+    "moneyInfluence": -3901,
+    "timeInfluence": -1
+  },
+  {
+    "_id": "06af895c-84f4-4465-af48-58b6ab0f02ad",
+    "index": 3,
+    "name": "Event ...",
+    "about": "Sit pariatur laborum proident mollit duis. Pariatur officia velit esse laboris officia est consequat irure culpa dolore nulla quis enim sint. Non enim sunt voluptate incididunt laboris est culpa. Do exercitation velit quis ad est.\r\n",
+    "moneyInfluence": 4318,
+    "timeInfluence": 3
+  },
+  {
+    "_id": "7fec53dc-efcc-463d-95c7-933391c9928c",
+    "index": 4,
+    "name": "Event ...",
+    "about": "Consectetur do dolore elit et ad ex excepteur eu consequat dolore reprehenderit sunt dolore qui. Id laboris nulla occaecat sunt. Ad dolor qui eiusmod cupidatat elit aute ea id laboris deserunt sunt nisi eu enim. Nostrud nostrud enim aliqua reprehenderit. Eu irure laboris quis mollit ullamco labore consectetur exercitation culpa Lorem culpa aute proident. Est duis reprehenderit ad consectetur eu proident nisi ex do reprehenderit amet duis magna. Velit sunt pariatur sit adipisicing officia irure do velit veniam pariatur.\r\n",
+    "moneyInfluence": -4000,
+    "timeInfluence": 2
+  },
+  {
+    "_id": "6b3508a1-3448-4877-ac8b-56f1a153ade6",
+    "index": 5,
+    "name": "Event ...",
+    "about": "Occaecat proident occaecat eu anim elit aute et consectetur pariatur sunt duis cillum id. Aliquip commodo laboris anim sit Lorem deserunt ullamco consequat in sint ea esse ipsum deserunt. Irure velit nostrud proident duis veniam officia id nostrud id nostrud. Deserunt sint consectetur nulla veniam ea amet mollit consequat ea proident dolor reprehenderit incididunt. Irure duis est aliqua sunt.\r\n",
+    "moneyInfluence": 4136,
+    "timeInfluence": 3
+  },
+  {
+    "_id": "7cbcf00e-a465-47df-a2c1-0880c1cdc783",
+    "index": 6,
+    "name": "Event ...",
+    "about": "Ad proident velit est minim aliqua reprehenderit do nostrud id in. Nisi do excepteur incididunt Lorem sunt dolor nisi eu. Ullamco magna tempor ad cupidatat occaecat in mollit ut dolor aute excepteur.\r\n",
+    "moneyInfluence": 663,
+    "timeInfluence": -1
+  },
+  {
+    "_id": "3b5ff42f-ac4f-4ce9-9bf0-0346c1890b0c",
+    "index": 7,
+    "name": "Event ...",
+    "about": "Incididunt tempor laborum tempor do mollit. Mollit cupidatat nisi quis cupidatat amet sunt ut laborum consectetur proident eu cillum. In commodo velit nostrud officia in. Enim tempor commodo elit ad enim ad pariatur veniam. Exercitation irure qui et cillum ut aliqua nulla non irure labore fugiat veniam tempor.\r\n",
+    "moneyInfluence": 3116,
+    "timeInfluence": 2
+  },
+  {
+    "_id": "63f78fb7-11fa-435a-bbc0-b2aa723c85cc",
+    "index": 8,
+    "name": "Event ...",
+    "about": "Excepteur labore quis non mollit elit magna. Sit in est occaecat ex sunt enim occaecat exercitation nisi consequat. Irure proident nostrud nostrud incididunt sint excepteur nostrud in. Dolore nulla aliquip minim nulla cupidatat non do proident. Laborum minim dolor nulla tempor proident. Proident deserunt nisi exercitation excepteur irure proident ut qui.\r\n",
+    "moneyInfluence": 3963,
+    "timeInfluence": 0
+  },
+  {
+    "_id": "7a8a0180-dcc6-4e7d-9b28-c47024e8c54a",
+    "index": 9,
+    "name": "Event ...",
+    "about": "Aliquip proident ex excepteur commodo excepteur anim labore et sunt ea. Ex irure voluptate ex dolore eu duis commodo in amet. Dolore do irure labore velit culpa amet voluptate cillum velit. Laborum in anim commodo cupidatat consequat. Laboris id qui et ex incididunt dolor.\r\n",
+    "moneyInfluence": 2557,
+    "timeInfluence": 2
+  }
+]

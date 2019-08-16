@@ -1,0 +1,222 @@
+[
+  {
+    "_id": "71036777-bc99-47d5-a4ab-61b7a4763f3c",
+    "index": 0,
+    "name": "Bunga",
+    "backendPowerRequired": 3588,
+    "frontendPowerRequired": 1788,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 12,
+    "income": 246469
+  },
+  {
+    "_id": "bdf0c46c-e3b5-4816-8a82-bb683b74b525",
+    "index": 1,
+    "name": "Optique",
+    "backendPowerRequired": 4280,
+    "frontendPowerRequired": 2933,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 5,
+    "income": 37946
+  },
+  {
+    "_id": "7cc5c886-1985-4a66-81e5-1fe551f68483",
+    "index": 2,
+    "name": "Techade",
+    "backendPowerRequired": 2565,
+    "frontendPowerRequired": 1854,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 3,
+    "income": 198617
+  },
+  {
+    "_id": "db237693-8f9f-4e7b-9fd9-f10c76fbb4db",
+    "index": 3,
+    "name": "Viasia",
+    "backendPowerRequired": 3077,
+    "frontendPowerRequired": 1008,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 6,
+    "income": 122134
+  },
+  {
+    "_id": "4c3dd8db-dd7d-4bfd-8cad-8cc1f317d972",
+    "index": 4,
+    "name": "Noralex",
+    "backendPowerRequired": 4059,
+    "frontendPowerRequired": 2018,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 8,
+    "income": 25439
+  },
+  {
+    "_id": "ec16bf4b-717a-4ac1-9068-8eaff38cfa83",
+    "index": 5,
+    "name": "Perkle",
+    "backendPowerRequired": 2740,
+    "frontendPowerRequired": 3907,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 11,
+    "income": 195847
+  },
+  {
+    "_id": "bba72d00-2b98-4d21-9eb3-df8bd1023b76",
+    "index": 6,
+    "name": "Zillatide",
+    "backendPowerRequired": 4543,
+    "frontendPowerRequired": 3079,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 9,
+    "income": 79937
+  },
+  {
+    "_id": "fa457bdf-9bb0-4682-ae10-47fa2bf09357",
+    "index": 7,
+    "name": "Exostream",
+    "backendPowerRequired": 1271,
+    "frontendPowerRequired": 4551,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 3,
+    "income": 216071
+  },
+  {
+    "_id": "89421190-2ced-46c9-8666-d18bf7aeac25",
+    "index": 8,
+    "name": "Uneeq",
+    "backendPowerRequired": 1609,
+    "frontendPowerRequired": 3771,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 4,
+    "income": 132099
+  },
+  {
+    "_id": "7d62e0b5-6b5e-4537-a1b4-6198c0cb49a0",
+    "index": 9,
+    "name": "Xylar",
+    "backendPowerRequired": 1682,
+    "frontendPowerRequired": 4855,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 11,
+    "income": 43877
+  },
+  {
+    "_id": "90a2d148-241c-4952-a166-22e05e90388e",
+    "index": 10,
+    "name": "Steeltab",
+    "backendPowerRequired": 2183,
+    "frontendPowerRequired": 3665,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 4,
+    "income": 173678
+  },
+  {
+    "_id": "8ee701bf-2026-4755-bc46-1e49fd987712",
+    "index": 11,
+    "name": "Rubadub",
+    "backendPowerRequired": 2962,
+    "frontendPowerRequired": 4633,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 8,
+    "income": 108991
+  },
+  {
+    "_id": "2be18bee-fa34-4a9a-bc05-cbb07fb675be",
+    "index": 12,
+    "name": "Ultrimax",
+    "backendPowerRequired": 3717,
+    "frontendPowerRequired": 1961,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 3,
+    "income": 103386
+  },
+  {
+    "_id": "3c78b8f2-cfee-4964-86c0-5d7f5322d25f",
+    "index": 13,
+    "name": "Turnabout",
+    "backendPowerRequired": 3344,
+    "frontendPowerRequired": 3283,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 8,
+    "income": 55170
+  },
+  {
+    "_id": "e040a8d5-24b4-48dd-9662-2314a308a0be",
+    "index": 14,
+    "name": "Nexgene",
+    "backendPowerRequired": 3133,
+    "frontendPowerRequired": 4695,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 11,
+    "income": 125926
+  },
+  {
+    "_id": "0ecd8754-7e1f-4302-841f-2d07215417bf",
+    "index": 15,
+    "name": "Pathways",
+    "backendPowerRequired": 4922,
+    "frontendPowerRequired": 4988,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 4,
+    "income": 70443
+  },
+  {
+    "_id": "5a38c497-28a8-4b5c-be79-960daa5e74af",
+    "index": 16,
+    "name": "Frolix",
+    "backendPowerRequired": 4955,
+    "frontendPowerRequired": 2851,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 7,
+    "income": 97185
+  },
+  {
+    "_id": "1d5744b6-8656-4988-ad8d-06a8ac9ba6de",
+    "index": 17,
+    "name": "Namebox",
+    "backendPowerRequired": 3802,
+    "frontendPowerRequired": 4228,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 7,
+    "income": 135268
+  },
+  {
+    "_id": "9f27cab2-80f9-4ee3-9989-9c5a26de1650",
+    "index": 18,
+    "name": "Quinex",
+    "backendPowerRequired": 2023,
+    "frontendPowerRequired": 2203,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 11,
+    "income": 226664
+  },
+  {
+    "_id": "bb59aa13-0681-4769-a430-0b7e45a7910c",
+    "index": 19,
+    "name": "Quonk",
+    "backendPowerRequired": 3262,
+    "frontendPowerRequired": 1206,
+    "backendProgress": 0,
+    "frontendProgress": 0,
+    "duration": 9,
+    "income": 236882
+  }
+]

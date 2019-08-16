@@ -1,0 +1,252 @@
+[
+  {
+    "_id": "3ca9a896-e445-4384-b37f-7d6f74bef2b9",
+    "index": 0,
+    "name": "Silva",
+    "lastName": "Hampton",
+    "backendPower": 296,
+    "frontendPower": 240,
+    "cost": 6376.9812,
+    "image": "8.png"
+  },
+  {
+    "_id": "5613f3a3-06c7-46cf-b42b-df245d5af1e4",
+    "index": 1,
+    "name": "Stark",
+    "lastName": "Orr",
+    "backendPower": 733,
+    "frontendPower": 582,
+    "cost": 4780.879,
+    "image": "4.png"
+  },
+  {
+    "_id": "38f4bd2e-5cb9-4d9c-992d-d9d8be47bb63",
+    "index": 2,
+    "name": "Frankie",
+    "lastName": "Ochoa",
+    "backendPower": 784,
+    "frontendPower": 355,
+    "cost": 4778.2524,
+    "image": "8.png"
+  },
+  {
+    "_id": "d75f37e2-d5b5-4deb-8aa2-89e0a977f3e5",
+    "index": 3,
+    "name": "Lola",
+    "lastName": "Crawford",
+    "backendPower": 196,
+    "frontendPower": 451,
+    "cost": 1566.6103,
+    "image": "2.png"
+  },
+  {
+    "_id": "d62b0d5a-1b88-4fa1-8391-51abb2d523d4",
+    "index": 4,
+    "name": "Alberta",
+    "lastName": "Bryant",
+    "backendPower": 561,
+    "frontendPower": 58,
+    "cost": 6476.2613,
+    "image": "6.png"
+  },
+  {
+    "_id": "3d0cbb1c-9a52-4f6e-bbcc-d88958714cb7",
+    "index": 5,
+    "name": "Rivers",
+    "lastName": "Turner",
+    "backendPower": 914,
+    "frontendPower": 715,
+    "cost": 7534.4618,
+    "image": "1.png"
+  },
+  {
+    "_id": "a308bb90-9283-44e5-9054-ae55b96c89b4",
+    "index": 6,
+    "name": "Minnie",
+    "lastName": "Dunlap",
+    "backendPower": 139,
+    "frontendPower": 11,
+    "cost": 3824.8329,
+    "image": "3.png"
+  },
+  {
+    "_id": "5d28f5e1-5d66-408f-9897-902ea5ab06cf",
+    "index": 7,
+    "name": "Bass",
+    "lastName": "Carey",
+    "backendPower": 372,
+    "frontendPower": 16,
+    "cost": 3868.9658,
+    "image": "5.png"
+  },
+  {
+    "_id": "df65a4e5-a91d-45b5-85fa-72663737b077",
+    "index": 8,
+    "name": "Leonard",
+    "lastName": "Black",
+    "backendPower": 944,
+    "frontendPower": 688,
+    "cost": 3145.9645,
+    "image": "2.png"
+  },
+  {
+    "_id": "5e23801f-6d96-4adc-ae3a-64d09ececfbb",
+    "index": 9,
+    "name": "Beverley",
+    "lastName": "Roberts",
+    "backendPower": 894,
+    "frontendPower": 414,
+    "cost": 2275.2917,
+    "image": "3.png"
+  },
+  {
+    "_id": "de21247b-9748-49fd-8b96-814cd59850c0",
+    "index": 10,
+    "name": "Allyson",
+    "lastName": "Riddle",
+    "backendPower": 902,
+    "frontendPower": 300,
+    "cost": 7750.2466,
+    "image": "3.png"
+  },
+  {
+    "_id": "d22f10cb-482f-47b7-9962-3aae2487a458",
+    "index": 11,
+    "name": "Wooten",
+    "lastName": "Macias",
+    "backendPower": 578,
+    "frontendPower": 754,
+    "cost": 6109.834,
+    "image": "1.png"
+  },
+  {
+    "_id": "cb7aa3c5-163b-4259-b1dd-7b29be79eef7",
+    "index": 12,
+    "name": "Bentley",
+    "lastName": "Sweet",
+    "backendPower": 299,
+    "frontendPower": 635,
+    "cost": 1223.7041,
+    "image": "3.png"
+  },
+  {
+    "_id": "985812d0-f9bb-43b6-890a-4689cfa1bafe",
+    "index": 13,
+    "name": "Mclaughlin",
+    "lastName": "Whitaker",
+    "backendPower": 463,
+    "frontendPower": 722,
+    "cost": 6429.1038,
+    "image": "2.png"
+  },
+  {
+    "_id": "39c0d961-dce7-404f-90a4-bd7bc545d8c3",
+    "index": 14,
+    "name": "Hinton",
+    "lastName": "Cantu",
+    "backendPower": 826,
+    "frontendPower": 703,
+    "cost": 1945.3281,
+    "image": "4.png"
+  },
+  {
+    "_id": "176e6ecd-e912-406a-a1b1-e4174b58384e",
+    "index": 15,
+    "name": "Higgins",
+    "lastName": "Greer",
+    "backendPower": 414,
+    "frontendPower": 750,
+    "cost": 2513.1178,
+    "image": "5.png"
+  },
+  {
+    "_id": "4b0912ce-b347-40cb-8a87-4c36041eb86c",
+    "index": 16,
+    "name": "Katie",
+    "lastName": "Hughes",
+    "backendPower": 217,
+    "frontendPower": 683,
+    "cost": 6405.7057,
+    "image": "8.png"
+  },
+  {
+    "_id": "d0533168-aa82-4fc2-8880-c874d97bedab",
+    "index": 17,
+    "name": "Natalia",
+    "lastName": "Sykes",
+    "backendPower": 559,
+    "frontendPower": 923,
+    "cost": 7570.8969,
+    "image": "4.png"
+  },
+  {
+    "_id": "8be9a3cb-3972-48f5-b28e-8282dcd80557",
+    "index": 18,
+    "name": "Hartman",
+    "lastName": "Fischer",
+    "backendPower": 346,
+    "frontendPower": 215,
+    "cost": 7765.7228,
+    "image": "2.png"
+  },
+  {
+    "_id": "66ed2d66-b1c7-492c-9477-ac63fbaa6875",
+    "index": 19,
+    "name": "Lancaster",
+    "lastName": "Knowles",
+    "backendPower": 957,
+    "frontendPower": 827,
+    "cost": 4805.4999,
+    "image": "2.png"
+  },
+  {
+    "_id": "f8ca8afc-44b9-424d-8285-21bb395b2eea",
+    "index": 20,
+    "name": "Perez",
+    "lastName": "Henry",
+    "backendPower": 142,
+    "frontendPower": 440,
+    "cost": 6087.2901,
+    "image": "5.png"
+  },
+  {
+    "_id": "7955b663-c85a-4b0b-a7a2-c1c694362b28",
+    "index": 21,
+    "name": "Owen",
+    "lastName": "Oneal",
+    "backendPower": 541,
+    "frontendPower": 197,
+    "cost": 2350.7364,
+    "image": "5.png"
+  },
+  {
+    "_id": "6ac46201-be1d-427a-9b0a-ccead9957ba9",
+    "index": 22,
+    "name": "Clarke",
+    "lastName": "Blankenship",
+    "backendPower": 949,
+    "frontendPower": 371,
+    "cost": 1676.972,
+    "image": "5.png"
+  },
+  {
+    "_id": "f3dfed95-54fb-4662-9ffd-9cfaf4d442b0",
+    "index": 23,
+    "name": "Kristine",
+    "lastName": "Cotton",
+    "backendPower": 469,
+    "frontendPower": 574,
+    "cost": 7980.4371,
+    "image": "8.png"
+  },
+  {
+    "_id": "a8027c83-75e5-4472-8fdf-d0e05389e618",
+    "index": 24,
+    "name": "Maryann",
+    "lastName": "Bradley",
+    "backendPower": 110,
+    "frontendPower": 15,
+    "cost": 4727.363,
+    "image": "7.png"
+  }
+]

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
+import {addAmount} from "../reducers/GameAction";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
-export default class ProjectListCellComponent extends Component {
+export class ProjectListCellComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -12,12 +15,20 @@ export default class ProjectListCellComponent extends Component {
       <View style={styles.cell}>
         <View>
           <Image
-            style={styles.image}
-            source={require('../assets/images/1.png')}
+            style={{
+              width: 198,
+              height: 189,
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+            source={{
+              uri: this.props.game.imageCache[this.props.item.getImage()]
+            }}
           />
         </View>
         <Text style={styles.name}>Name: {this.props.item.getName()}</Text>
-        <Text style={styles.name}>Last name: {this.props.item.getLastname()}</Text>
+        <Text style={styles.name}>Last name: {this.props.item.getLastName()}</Text>
         <View style={{
           flex: 1,
           flexDirection: 'row',
@@ -44,6 +55,13 @@ export default class ProjectListCellComponent extends Component {
   }
 
 }
+
+const mapStateToProps = (state) => {
+  const {game} = state;
+  return {game}
+};
+
+export default connect(mapStateToProps)(ProjectListCellComponent);
 
 const styles = StyleSheet.create({
   cell: {

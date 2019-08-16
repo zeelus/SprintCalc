@@ -37,27 +37,25 @@ class GameScreen extends Component {
   };
 
   valueBackendDidChange = (item, value) => {
-
     console.log("valueBackendDidChange: ", {[item.getId()]: value});
+
     this.setState({
       slidersBackend: {
         ...this.state.slidersBackend,
         [item.getId()]: value
       }
     });
-
   };
 
   valueFrontendDidChange = (item, value) => {
-
     console.log("valueFrontendDidChange: ", {[item.getId()]: value});
+
     this.setState({
       slidersFrontend: {
         ...this.state.slidersFrontend,
         [item.getId()]: value
       }
     });
-
   };
 
   render() {
