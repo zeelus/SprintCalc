@@ -30,6 +30,7 @@ export default class ProjectListCellComponent extends Component {
             marginTop: 20
           }}>
             <View style={{flexDirection: 'col'}}>
+              <Text style={styles.statText}>{this.props.roundsLeft}</Text>
               <Text style={styles.statText}>Backend</Text>
               <Text style={styles.statText}>
                 {this.props.item.getBackendProgress()}/{this.props.item.getBackendPowerRequired()}

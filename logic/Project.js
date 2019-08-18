@@ -35,6 +35,14 @@ export default class Project {
     return this.frontendProgress;
   }
 
+  setBackendProgress(value) {
+    this.backendProgress = value;
+  }
+
+  setFrontendProgress(value) {
+    this.frontendProgress = value;
+  }
+
   getName() {
     return this.name;
   }

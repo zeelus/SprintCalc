@@ -5,8 +5,8 @@ export const ADD_DEVELOPER = 'ADD_DEVELOPER';
 export const REMOVE_DEVELOPER = 'REMOVE_DEVELOPER';
 export const ADD_PROJECT = 'ADD_PROJECT';
 export const REMOVE_PROJECT = 'REMOVE_PROJECT';
-export const ADD_EVENT = 'ADD_EVENT';
-export const NEXT_ROUND = 'NEXT_ROUND';
+export const PROGRESS_PROJECT = 'PROGRESS_PROJECT';
+export const INCREMENT_ROUND = 'INCREMENT_ROUND';
 
 /* Action handlers: */
 export function addBalance(balance) {
@@ -23,9 +23,9 @@ export function subtractBalance(balance) {
   }
 }
 
-export function nextRound() {
+export function incrementRound() {
   return {
-    type: NEXT_ROUND
+    type: INCREMENT_ROUND
   }
 }
 
@@ -54,5 +54,12 @@ export function removeProject(project) {
   return {
     type: REMOVE_PROJECT,
     project
+  }
+}
+
+export function progressProject(project, backend, frontend) {
+  return {
+    type: PROGRESS_PROJECT,
+    project, backend, frontend
   }
 }

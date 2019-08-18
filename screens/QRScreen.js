@@ -94,6 +94,7 @@ export class BarcodeScanner extends React.Component {
             onPress: () => {
               console.log('OK Pressed: Adding Project...');
               this.props.addProj(project);
+
             }},
         ],
         {cancelable: false},

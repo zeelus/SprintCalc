@@ -5,13 +5,14 @@ import ImageData from "../logic/ImageData"
 
 import {combineReducers} from 'redux';
 import {
-  NEXT_ROUND,
+  INCREMENT_ROUND,
   ADD_BALANCE,
   SUBTRACT_BALANCE,
   ADD_DEVELOPER,
   ADD_PROJECT,
   REMOVE_DEVELOPER,
-  REMOVE_PROJECT
+  REMOVE_PROJECT,
+  PROGRESS_PROJECT
 } from './GameAction'
 
 /* Global Store */
@@ -90,20 +91,25 @@ const gameReducer = (state = INIT_GLOBAL_STORE, action) => {
 /* Player's Store */
 
 const initPlayerBalance = () => {
-  return 5000;
+  return 500000;
+};
+
+const initMaxLoad = () => {
+  return -100000;
 };
 
 const INITIAL_STATE = {
   balance: initPlayerBalance(),
+  maxLoan: initMaxLoad(),
   round: 1,
   projects: [],
   developers: [],
-  events: []
+  projectState: new Map() //map: {uuid: value}
 };
 
 const playerReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case NEXT_ROUND:
+    case INCREMENT_ROUND:
       return {
         ...state,
         round: state.round + 1
@@ -116,17 +122,40 @@ const playerReducer = (state = INITIAL_STATE, action) => {
     case ADD_PROJECT:
       return {
         ...state,
-        projects: [...state.projects, action.project]
+        projects: [...state.projects, action.project],
+        projectState: {
+          ...state.projectState,
+          [action.project.getId()]: 1
+        }
       };
     case REMOVE_PROJECT:
+      const newProjectStates = {...state.projectState};
+      delete newProjectStates[action.project.getId()];
       return {
         ...state,
-        projects: [...state.projects.filter((e) => e.getId() !== action.project.getId())]
+        projects: [...state.projects.filter((e) => e.getId() !== action.project.getId())],
+        projectState: {...newProjectStates}
       };
     case REMOVE_DEVELOPER:
       return {
         ...state,
         developers: [...state.developers.filter((e) => e.getId() !== action.developer.getId())]
+      };
+    case PROGRESS_PROJECT:
+      let newProjects = [...state.projects];
+      newProjects.forEach((e) => {
+          if (e.getId() === action.project.getId()) {
+            e.setBackendProgress(action.backend);
+            e.setFrontendProgress(action.frontend);
+          }
+        });
+      return {
+        ...state,
+        projects: [...newProjects],
+        projectState: {
+          ...state.projectState,
+          [action.project.getId()]: state.projectState[action.project.getId()] + 1
+        }
       };
     case ADD_BALANCE:
       return {
