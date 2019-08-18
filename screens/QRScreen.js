@@ -4,7 +4,7 @@ import * as Permissions from 'expo-permissions';
 import {BarCodeScanner} from 'expo-barcode-scanner';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addDeveloper, addProject} from '../reducers/GameAction'
+import {addDeveloper, addProject, addBalance} from '../reducers/GameAction'
 
 export class BarcodeScanner extends React.Component {
   state = {
@@ -82,7 +82,7 @@ export class BarcodeScanner extends React.Component {
         `Statistics:\n
         Backend: ${project.getBackendPowerRequired()}\n
         Fronted: ${project.getFrontendPowerRequired()}\n
-        Income: ${project.getIncome()}\n
+        Income: $${project.getIncome()}\n
         Duration: ${project.getDuration()}`,
         [
           {
@@ -131,6 +131,19 @@ export class BarcodeScanner extends React.Component {
     const eventIndex = this.findEvent(data);
     if (eventIndex !== -1) {
       const event = this.props.game.events[eventIndex];
+      Alert.alert(
+        `New event: ${event.getName()}`,
+        `Info: ${event.getAbout()}\n
+        Result: $${event.getMoneyInfluence()}`,
+        [{
+          text: 'OK',
+          onPress: () => {
+            console.log('OK Pressed: Processing the event, update balance: ' + event.getMoneyInfluence());
+            this.props.updateBalance(event.getMoneyInfluence());
+          }
+        }],
+        {cancelable: false},
+      );
       return;
     }
   };
@@ -139,7 +152,8 @@ export class BarcodeScanner extends React.Component {
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
     addDev: addDeveloper,
-    addProj: addProject
+    addProj: addProject,
+    updateBalance: addBalance
   }, dispatch)
 );
 
