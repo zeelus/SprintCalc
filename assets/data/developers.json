@@ -4,9 +4,9 @@
     "index": 0,
     "name": "Silva",
     "lastName": "Hampton",
-    "backendPower": 296,
-    "frontendPower": 240,
-    "cost": 6376.9812,
+    "backendPower": 940,
+    "frontendPower": 37,
+    "cost": 2541.0,
     "image": "8.png"
   },
   {
@@ -14,9 +14,9 @@
     "index": 1,
     "name": "Stark",
     "lastName": "Orr",
-    "backendPower": 733,
-    "frontendPower": 582,
-    "cost": 4780.879,
+    "backendPower": 913,
+    "frontendPower": 76,
+    "cost": 3199.0,
     "image": "4.png"
   },
   {
@@ -24,9 +24,9 @@
     "index": 2,
     "name": "Frankie",
     "lastName": "Ochoa",
-    "backendPower": 784,
-    "frontendPower": 355,
-    "cost": 4778.2524,
+    "backendPower": 868,
+    "frontendPower": 118,
+    "cost": 3860.0,
     "image": "8.png"
   },
   {
@@ -34,9 +34,9 @@
     "index": 3,
     "name": "Lola",
     "lastName": "Crawford",
-    "backendPower": 196,
-    "frontendPower": 451,
-    "cost": 1566.6103,
+    "backendPower": 843,
+    "frontendPower": 144,
+    "cost": 4273.0,
     "image": "2.png"
   },
   {
@@ -44,9 +44,9 @@
     "index": 4,
     "name": "Alberta",
     "lastName": "Bryant",
-    "backendPower": 561,
-    "frontendPower": 58,
-    "cost": 6476.2613,
+    "backendPower": 779,
+    "frontendPower": 190,
+    "cost": 4983.0,
     "image": "6.png"
   },
   {
@@ -54,9 +54,9 @@
     "index": 5,
     "name": "Rivers",
     "lastName": "Turner",
-    "backendPower": 914,
-    "frontendPower": 715,
-    "cost": 7534.4618,
+    "backendPower": 740,
+    "frontendPower": 238,
+    "cost": 5764.0,
     "image": "1.png"
   },
   {
@@ -64,9 +64,9 @@
     "index": 6,
     "name": "Minnie",
     "lastName": "Dunlap",
-    "backendPower": 139,
-    "frontendPower": 11,
-    "cost": 3824.8329,
+    "backendPower": 683,
+    "frontendPower": 286,
+    "cost": 6509.0,
     "image": "3.png"
   },
   {
@@ -74,9 +74,9 @@
     "index": 7,
     "name": "Bass",
     "lastName": "Carey",
-    "backendPower": 372,
-    "frontendPower": 16,
-    "cost": 3868.9658,
+    "backendPower": 653,
+    "frontendPower": 326,
+    "cost": 7179.0,
     "image": "5.png"
   },
   {
@@ -84,9 +84,9 @@
     "index": 8,
     "name": "Leonard",
     "lastName": "Black",
-    "backendPower": 944,
-    "frontendPower": 688,
-    "cost": 3145.9645,
+    "backendPower": 613,
+    "frontendPower": 366,
+    "cost": 7814.0,
     "image": "2.png"
   },
   {
@@ -94,9 +94,9 @@
     "index": 9,
     "name": "Beverley",
     "lastName": "Roberts",
-    "backendPower": 894,
-    "frontendPower": 414,
-    "cost": 2275.2917,
+    "backendPower": 572,
+    "frontendPower": 402,
+    "cost": 8375.0,
     "image": "3.png"
   },
   {
@@ -104,9 +104,9 @@
     "index": 10,
     "name": "Allyson",
     "lastName": "Riddle",
-    "backendPower": 902,
-    "frontendPower": 300,
-    "cost": 7750.2466,
+    "backendPower": 544,
+    "frontendPower": 438,
+    "cost": 8977.0,
     "image": "3.png"
   },
   {
@@ -114,9 +114,9 @@
     "index": 11,
     "name": "Wooten",
     "lastName": "Macias",
-    "backendPower": 578,
-    "frontendPower": 754,
-    "cost": 6109.834,
+    "backendPower": 497,
+    "frontendPower": 477,
+    "cost": 9580.0,
     "image": "1.png"
   },
   {
@@ -124,9 +124,9 @@
     "index": 12,
     "name": "Bentley",
     "lastName": "Sweet",
-    "backendPower": 299,
-    "frontendPower": 635,
-    "cost": 1223.7041,
+    "backendPower": 451,
+    "frontendPower": 536,
+    "cost": 9195.0,
     "image": "3.png"
   },
   {
@@ -134,9 +134,9 @@
     "index": 13,
     "name": "Mclaughlin",
     "lastName": "Whitaker",
-    "backendPower": 463,
-    "frontendPower": 722,
-    "cost": 6429.1038,
+    "backendPower": 415,
+    "frontendPower": 575,
+    "cost": 8615.0,
     "image": "2.png"
   },
   {
@@ -144,9 +144,9 @@
     "index": 14,
     "name": "Hinton",
     "lastName": "Cantu",
-    "backendPower": 826,
-    "frontendPower": 703,
-    "cost": 1945.3281,
+    "backendPower": 370,
+    "frontendPower": 609,
+    "cost": 7898.0,
     "image": "4.png"
   },
   {
@@ -154,9 +154,9 @@
     "index": 15,
     "name": "Higgins",
     "lastName": "Greer",
-    "backendPower": 414,
-    "frontendPower": 750,
-    "cost": 2513.1178,
+    "backendPower": 322,
+    "frontendPower": 651,
+    "cost": 7103.0,
     "image": "5.png"
   },
   {
@@ -164,9 +164,9 @@
     "index": 16,
     "name": "Katie",
     "lastName": "Hughes",
-    "backendPower": 217,
-    "frontendPower": 683,
-    "cost": 6405.7057,
+    "backendPower": 299,
+    "frontendPower": 691,
+    "cost": 6759.0,
     "image": "8.png"
   },
   {
@@ -174,9 +174,9 @@
     "index": 17,
     "name": "Natalia",
     "lastName": "Sykes",
-    "backendPower": 559,
-    "frontendPower": 923,
-    "cost": 7570.8969,
+    "backendPower": 261,
+    "frontendPower": 729,
+    "cost": 6156.0,
     "image": "4.png"
   },
   {
@@ -184,9 +184,9 @@
     "index": 18,
     "name": "Hartman",
     "lastName": "Fischer",
-    "backendPower": 346,
-    "frontendPower": 215,
-    "cost": 7765.7228,
+    "backendPower": 217,
+    "frontendPower": 770,
+    "cost": 5451.0,
     "image": "2.png"
   },
   {
@@ -194,9 +194,9 @@
     "index": 19,
     "name": "Lancaster",
     "lastName": "Knowles",
-    "backendPower": 957,
-    "frontendPower": 827,
-    "cost": 4805.4999,
+    "backendPower": 161,
+    "frontendPower": 817,
+    "cost": 4527.0,
     "image": "2.png"
   },
   {
@@ -204,9 +204,9 @@
     "index": 20,
     "name": "Perez",
     "lastName": "Henry",
-    "backendPower": 142,
-    "frontendPower": 440,
-    "cost": 6087.2901,
+    "backendPower": 117,
+    "frontendPower": 857,
+    "cost": 3820.0,
     "image": "5.png"
   },
   {
@@ -214,9 +214,9 @@
     "index": 21,
     "name": "Owen",
     "lastName": "Oneal",
-    "backendPower": 541,
-    "frontendPower": 197,
-    "cost": 2350.7364,
+    "backendPower": 97,
+    "frontendPower": 893,
+    "cost": 3541.0,
     "image": "5.png"
   },
   {
@@ -224,9 +224,9 @@
     "index": 22,
     "name": "Clarke",
     "lastName": "Blankenship",
-    "backendPower": 949,
-    "frontendPower": 371,
-    "cost": 1676.972,
+    "backendPower": 23,
+    "frontendPower": 34,
+    "cost": 676.0,
     "image": "5.png"
   },
   {
@@ -234,9 +234,9 @@
     "index": 23,
     "name": "Kristine",
     "lastName": "Cotton",
-    "backendPower": 469,
-    "frontendPower": 574,
-    "cost": 7980.4371,
+    "backendPower": 32,
+    "frontendPower": 943,
+    "cost": 2457.0,
     "image": "8.png"
   },
   {
@@ -244,9 +244,9 @@
     "index": 24,
     "name": "Maryann",
     "lastName": "Bradley",
-    "backendPower": 110,
-    "frontendPower": 15,
-    "cost": 4727.363,
+    "backendPower": 1,
+    "frontendPower": 987,
+    "cost": 1992.0,
     "image": "7.png"
   }
 ]
