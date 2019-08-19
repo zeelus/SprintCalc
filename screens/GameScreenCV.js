@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {SafeAreaView, FlatList, Alert} from 'react-native';
+import {SafeAreaView, FlatList, Alert, View} from 'react-native';
 import CVCell from '../components/CVListCellComponent'
 import {removeDeveloper} from "../reducers/GameAction";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
-import {LinearGradient} from 'expo-linear-gradient'
 
 class GameScreenCV extends Component {
 
@@ -15,7 +14,7 @@ class GameScreenCV extends Component {
 
   render() {
     return (
-      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#9d5ec2'}}>
         <SafeAreaView style={{flex: 1}}>
           <FlatList
             data={this.props.player.developers}
@@ -48,7 +47,7 @@ class GameScreenCV extends Component {
             keyExtractor={(item, index) => index.toString()}
           />
         </SafeAreaView>
-      </LinearGradient>
+      </View>
     )
   }
 }

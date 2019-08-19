@@ -142,7 +142,7 @@ class GameScreen extends Component {
 
   render() {
     return (
-      <LinearGradient colors={['#845EC2', '#D65DB1', '#FF9671', '#FFC75F', '#F9F871']} style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#f9d671'}}>
       <SafeAreaView style={{flex: 1, flexDirection: 'col'}}>
         <View style={{flexDirection: 'row'}}>
           <View style={{flex: 1, height: 70, width: 30}}>
@@ -200,7 +200,7 @@ class GameScreen extends Component {
           </View>
         </View>
       </SafeAreaView>
-      </LinearGradient>
+      </View>
       
     )
   }
