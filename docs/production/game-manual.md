@@ -33,3 +33,14 @@ Gracze mają do rozegranie 40 rund, w których kolejno:
 
 Pierwszy gracz, którego saldo spadnie poniżej 0 przegrywa. 
 
+##Budowanie aplkacji
+
+Kod żródłowy aplikacji dostępny pod adresem: [https://github.com/zeelus/SprintCalc](https://github.com/zeelus/SprintCalc)
+
+Aby zbudować należy zainstalować oprogramowanie node.js.
+
+W katalogu z kodem żródłowym wykonać następujące komendy:
+
+1. node install
+2. expo start
+
