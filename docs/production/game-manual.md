@@ -15,7 +15,7 @@ Do gry wymagana jest aplikacja **SprintCalc**
 
 Przygotowanie gry:
 
-1. Przygotuj aplikacji.
+1. Przygotuj aplikację.
 2. Podziel karty zgodnie z informacją zawartą pod kodem QR np. programiści, zdarzenia, projekty.
 
 Celem gry jest zdobycie większej ilości pieniędzy od przeciwnika. 
