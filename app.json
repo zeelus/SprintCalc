@@ -4,6 +4,13 @@
     "slug": "SprintCalc",
     "privacy": "public",
     "sdkVersion": "33.0.0",
+    "ios": {
+      "bundleIdentifier": "com.AAA.B",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.AAA.B"
+    },
     "platforms": [
       "ios",
       "android",
@@ -22,9 +29,6 @@
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+    ]
   }
 }
