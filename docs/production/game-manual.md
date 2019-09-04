@@ -6,9 +6,9 @@ Ilość graczy: 2
 
 Skład pakietu: 
 
-1. 24 kart postaci
+1. 15 kart postaci
 2. 10 kart zdarzeń
-3. 20 kart projektów
+3. 15 kart projektów
 
 Do gry wymagana jest aplikacja SprintCalc. Aplikacja dostępna jest pod adresem: https://github.com/zeelus/SprintCalc.
 
@@ -46,4 +46,7 @@ W katalogu z kodem źródłowym wykonać następujące komendy:
 1. node install
 2. npm install expo-cli --global
 3. expo start
+
+## Pobranie aplikcaji
+Aplikację można też pobrać skanując kod na stronie: `https://expo.io/@zee2000/SprintCalc`
 
