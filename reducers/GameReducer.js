@@ -91,7 +91,7 @@ const gameReducer = (state = INIT_GLOBAL_STORE, action) => {
 /* Player's Store */
 
 const initPlayerBalance = () => {
-  return 500000;
+  return 100000;
 };
 
 const initMaxLoad = () => {
